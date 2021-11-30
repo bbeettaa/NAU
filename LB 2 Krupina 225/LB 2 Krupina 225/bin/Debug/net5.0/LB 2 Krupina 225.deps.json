@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "LB 2 Krupina 225/1.0.0": {
+        "dependencies": {
+          "InputOutput": "1.0.0"
+        },
+        "runtime": {
+          "LB 2 Krupina 225.dll": {}
+        }
+      },
+      "InputOutput/1.0.0": {
+        "runtime": {
+          "InputOutput.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LB 2 Krupina 225/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InputOutput/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

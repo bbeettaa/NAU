@@ -1,0 +1,87 @@
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\ru\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\ru\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\ru\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\Bll Test.dll.config
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\Bll Test.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\Bll Test.pdb
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\AltCover.Engine.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\AltCover.exe
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\AltCover.Monitor.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\BLL.exe
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\DAL.exe
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\Manatee.Json.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\Mono.Cecil.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\Mono.Cecil.Mdb.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\Mono.Cecil.Pdb.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\Mono.Cecil.Rocks.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\Mono.Options.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\System.Collections.Immutable.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\System.Text.Json.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\FSharp.Core.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\Microsoft.Build.Utilities.Core.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\Microsoft.Build.Framework.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\BlackFox.CommandLine.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\System.Memory.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\System.ValueTuple.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\System.Buffers.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\Microsoft.NET.StringTools.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\BLL.pdb
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\BLL.exe.config
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\DAL.pdb
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\DAL.exe.config
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\AltCover.exe.config
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\System.Text.Json.xml
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\System.Memory.xml
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\System.ValueTuple.xml
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\System.Buffers.xml
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\eo\AltCover.Engine.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\cs\FSharp.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\de\FSharp.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\es\FSharp.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\fr\FSharp.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\it\FSharp.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\ja\FSharp.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\ko\FSharp.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\pl\FSharp.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\pt-BR\FSharp.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\ru\FSharp.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\tr\FSharp.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\zh-Hans\FSharp.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\zh-Hant\FSharp.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\cs\Microsoft.Build.Utilities.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\de\Microsoft.Build.Utilities.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\en\Microsoft.Build.Utilities.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\es\Microsoft.Build.Utilities.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\fr\Microsoft.Build.Utilities.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\it\Microsoft.Build.Utilities.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\ja\Microsoft.Build.Utilities.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\ko\Microsoft.Build.Utilities.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\pl\Microsoft.Build.Utilities.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\pt-BR\Microsoft.Build.Utilities.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\ru\Microsoft.Build.Utilities.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\tr\Microsoft.Build.Utilities.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\zh-Hans\Microsoft.Build.Utilities.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\bin\Debug\zh-Hant\Microsoft.Build.Utilities.Core.resources.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\obj\Debug\Unit Tests.csproj.AssemblyReference.cache
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\obj\Debug\Unit Tests.csproj.CoreCompileInputs.cache
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\obj\Debug\Unit Tests.csproj.CopyComplete
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\obj\Debug\Bll Test.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\UnitTestProject1\obj\Debug\Bll Test.pdb

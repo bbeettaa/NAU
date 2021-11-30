@@ -1,0 +1,2467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>AltCover.Engine</name></assembly>
+<members>
+<member name="P:AltCover.RetryDelete.Files(System.String[])">
+<summary>
+ The file relative location (if empty, then no-op)
+</summary>
+</member>
+<member name="P:AltCover.RetryDelete.Files">
+<summary>
+ The file relative location (if empty, then no-op)
+</summary>
+</member>
+<member name="M:AltCover.RetryDelete.Execute">
+<summary>
+ <para>Perform the operation</para>
+ <returns>The success of the outcome.</returns>
+</summary>
+</member>
+<member name="M:AltCover.RetryDelete.#ctor">
+<summary>
+ <para>The default constructor</para>
+</summary>
+</member>
+<member name="T:AltCover.RetryDelete">
+<summary>
+ <para>Used by the .net core implementation to tidy files that may be in a lingering 'in use' state</para>
+ <para>Not intended for general use, but see the `AltCover.targets` file for how it is used around the test stage.</para>
+</summary>
+</member>
+<member name="P:AltCover.ContingentCopy.RelativeDir(System.String)">
+<summary>
+ The file relative location (if empty, then no-op)
+</summary>
+</member>
+<member name="P:AltCover.ContingentCopy.ProjectDir(System.String)">
+<summary>
+ The project directory for basing relative paths from (possibly empty; ignored if not an absolute path)
+</summary>
+</member>
+<member name="P:AltCover.ContingentCopy.InstrumentDirectory(System.String)">
+<summary>
+ The base of the relative to directory
+</summary>
+</member>
+<member name="P:AltCover.ContingentCopy.FileName(System.String)">
+<summary>
+ The name of the file
+</summary>
+</member>
+<member name="P:AltCover.ContingentCopy.CopyToOutputDirectory(System.String)">
+<summary>
+ The file copying property (if empty, then no-op)
+</summary>
+</member>
+<member name="P:AltCover.ContingentCopy.BuildOutputDirectory(System.String)">
+<summary>
+ The base of the relative from directory
+</summary>
+</member>
+<member name="P:AltCover.ContingentCopy.RelativeDir">
+<summary>
+ The file relative location (if empty, then no-op)
+</summary>
+</member>
+<member name="P:AltCover.ContingentCopy.ProjectDir">
+<summary>
+ The project directory for basing relative paths from (possibly empty; ignored if not an absolute path)
+</summary>
+</member>
+<member name="P:AltCover.ContingentCopy.InstrumentDirectory">
+<summary>
+ The base of the relative to directory
+</summary>
+</member>
+<member name="P:AltCover.ContingentCopy.FileName">
+<summary>
+ The name of the file
+</summary>
+</member>
+<member name="P:AltCover.ContingentCopy.CopyToOutputDirectory">
+<summary>
+ The file copying property (if empty, then no-op)
+</summary>
+</member>
+<member name="P:AltCover.ContingentCopy.BuildOutputDirectory">
+<summary>
+ The base of the relative from directory
+</summary>
+</member>
+<member name="M:AltCover.ContingentCopy.Execute">
+<summary>
+ <para>Perform the operation</para>
+ <returns>The success of the outcome.</returns>
+</summary>
+</member>
+<member name="M:AltCover.ContingentCopy.#ctor">
+<summary>
+ <para>The default constructor</para>
+</summary>
+</member>
+<member name="T:AltCover.ContingentCopy">
+<summary>
+ <para>Used by the .net core implementation to copy files copied relative to the output directory to the same locations relative to the instrumented files folder.</para>
+ <para>Not intended for general use, but see the `AltCover.targets` file for how it is used around the test stage.</para>
+</summary>
+</member>
+<member name="P:AltCover.RunSettings.Verbosity(System.String)">
+<summary>
+ Corresponds to command line option ` -q` (expects names of `System.Diagnostics.TraceLevel` values)
+</summary>
+</member>
+<member name="P:AltCover.RunSettings.TestSetting(System.String)">
+<summary>
+ The current settings file to be extended
+</summary>
+</member>
+<member name="P:AltCover.RunSettings.Extended(System.String)">
+<summary>
+ The settings file generated, an output parameter
+</summary>
+</member>
+<member name="P:AltCover.RunSettings.Verbosity">
+<summary>
+ Corresponds to command line option ` -q` (expects names of `System.Diagnostics.TraceLevel` values)
+</summary>
+</member>
+<member name="P:AltCover.RunSettings.TestSetting">
+<summary>
+ The current settings file to be extended
+</summary>
+</member>
+<member name="P:AltCover.RunSettings.Extended">
+<summary>
+ The settings file generated, an output parameter
+</summary>
+</member>
+<member name="M:AltCover.RunSettings.Execute">
+<summary>
+ <para>Perform the operation</para>
+ <returns>The success of the outcome.</returns>
+</summary>
+</member>
+<member name="M:AltCover.RunSettings.#ctor">
+<summary>
+ <para>The default constructor</para>
+</summary>
+</member>
+<member name="T:AltCover.RunSettings">
+<summary>
+ <para>Used by the .net core implementation to inject an AltCover data collector, by creating a temporary run-settings file that includes AltCover as well as any user-defined settings.</para>
+ <para>Not intended for general use, but see the `AltCover.targets` file for how it is used around the test stage.</para>
+</summary>
+</member>
+<member name="P:AltCover.Echo.Verbosity(System.String)">
+<summary>
+ Corresponds to command line option ` -q` (expects names of `System.Diagnostics.TraceLevel` values)
+</summary>
+</member>
+<member name="P:AltCover.Echo.Text(System.String)">
+<summary>
+ The text to write, a required parameter
+</summary>
+</member>
+<member name="P:AltCover.Echo.Colour(System.String)">
+<summary>
+ The name of the output colour, defaulting to current
+</summary>
+</member>
+<member name="P:AltCover.Echo.Verbosity">
+<summary>
+ Corresponds to command line option ` -q` (expects names of `System.Diagnostics.TraceLevel` values)
+</summary>
+</member>
+<member name="P:AltCover.Echo.Text">
+<summary>
+ The text to write, a required parameter
+</summary>
+</member>
+<member name="P:AltCover.Echo.Colour">
+<summary>
+ The name of the output colour, defaulting to current
+</summary>
+</member>
+<member name="M:AltCover.Echo.Execute">
+<summary>
+ <para>Perform the operation</para>
+ <returns>The success of the outcome.</returns>
+</summary>
+</member>
+<member name="M:AltCover.Echo.#ctor">
+<summary>
+ <para>The default constructor</para>
+</summary>
+</member>
+<member name="T:AltCover.Echo">
+<summary>
+ <para>Outputs a possibly coloured string of text to `stdout`.</para>
+</summary>
+</member>
+<member name="M:AltCover.GetVersion.Execute">
+<summary>
+ <para>Perform the operation</para>
+ <returns>The success of the outcome.</returns>
+</summary>
+</member>
+<member name="M:AltCover.GetVersion.#ctor">
+<summary>
+ <para>The default constructor</para>
+</summary>
+</member>
+<member name="T:AltCover.GetVersion">
+<summary>
+ <para>Description of the `AltCover Version` command</para>
+</summary>
+</member>
+<member name="M:AltCover.PowerShell.Execute">
+<summary>
+ <para>Perform the operation</para>
+ <returns>The success of the outcome.</returns>
+</summary>
+</member>
+<member name="M:AltCover.PowerShell.#ctor">
+<summary>
+ <para>The default constructor</para>
+</summary>
+</member>
+<member name="T:AltCover.PowerShell">
+<summary>
+ <para>Description of the `AltCover ImportModule` command</para>
+</summary>
+</member>
+<member name="P:AltCover.Collect.WorkingDirectory(System.String)">
+<summary>
+ Corresponds to command line option `-w, --workingDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Collect.Verbosity(System.String)">
+<summary>
+ Corresponds to command line option ` -q` (expects names of `System.Diagnostics.TraceLevel` values)
+</summary>
+</member>
+<member name="P:AltCover.Collect.Threshold(System.String)">
+<summary>
+ Corresponds to command line option `-t, --threshold=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Collect.SummaryFormat(System.String)">
+<summary>
+ Corresponds to command line option `--teamcity[=VALUE]`
+</summary>
+</member>
+<member name="P:AltCover.Collect.RecorderDirectory(System.String)">
+<summary>
+ Corresponds to command line option `-r, --recorderDirectory=VALUE`; a required parameter
+</summary>
+</member>
+<member name="P:AltCover.Collect.OutputFile(System.String)">
+<summary>
+ Corresponds to command line option `-o, --outputFile=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Collect.LcovReport(System.String)">
+<summary>
+ Corresponds to command line option `-l, --lcovReport=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Collect.ExposeReturnCode(System.Boolean)">
+<summary>
+ Corresponds to the converse of command line option `--dropReturnCode `
+</summary>
+</member>
+<member name="P:AltCover.Collect.Executable(System.String)">
+<summary>
+ Corresponds to command line option `-x, --executable=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Collect.CommandLine(System.String[])">
+<summary>
+ Corresponds to the command line arguments for the executable, given after a `-- `
+</summary>
+</member>
+<member name="P:AltCover.Collect.Cobertura(System.String)">
+<summary>
+ Corresponds to command line option `-c, --cobertura=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Collect.WorkingDirectory">
+<summary>
+ Corresponds to command line option `-w, --workingDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Collect.Verbosity">
+<summary>
+ Corresponds to command line option ` -q` (expects names of `System.Diagnostics.TraceLevel` values)
+</summary>
+</member>
+<member name="P:AltCover.Collect.Threshold">
+<summary>
+ Corresponds to command line option `-t, --threshold=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Collect.SummaryFormat">
+<summary>
+ Corresponds to command line option `--teamcity[=VALUE]`
+</summary>
+</member>
+<member name="P:AltCover.Collect.Summary">
+<summary>
+ Task output calue, the summary of coverage.
+</summary>
+</member>
+<member name="P:AltCover.Collect.RecorderDirectory">
+<summary>
+ Corresponds to command line option `-r, --recorderDirectory=VALUE`; a required parameter
+</summary>
+</member>
+<member name="P:AltCover.Collect.OutputFile">
+<summary>
+ Corresponds to command line option `-o, --outputFile=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Collect.LcovReport">
+<summary>
+ Corresponds to command line option `-l, --lcovReport=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Collect.ExposeReturnCode">
+<summary>
+ Corresponds to the converse of command line option `--dropReturnCode `
+</summary>
+</member>
+<member name="P:AltCover.Collect.Executable">
+<summary>
+ Corresponds to command line option `-x, --executable=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Collect.CommandLine">
+<summary>
+ Corresponds to the command line arguments for the executable, given after a `-- `
+</summary>
+</member>
+<member name="P:AltCover.Collect.Cobertura">
+<summary>
+ Corresponds to command line option `-c, --cobertura=VALUE`
+</summary>
+</member>
+<member name="M:AltCover.Collect.Execute">
+<summary>
+ <para>Perform the operation</para>
+ <returns>The success of the outcome.</returns>
+</summary>
+</member>
+<member name="M:AltCover.Collect.#ctor">
+<summary>
+ <para>The default constructor</para>
+</summary>
+</member>
+<member name="T:AltCover.Collect">
+<summary>
+ <para>Description of the `AltCover Runner` command</para>
+</summary>
+</member>
+<member name="P:AltCover.Prepare.ZipFile(System.Boolean)">
+<summary>
+ Corresponds to command line option `--zipfile`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.VisibleBranches(System.Boolean)">
+<summary>
+ Corresponds to command line option ` -v, --visibleBranches`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.Verbosity(System.String)">
+<summary>
+ Corresponds to command line option ` -q` (expects names of `System.Diagnostics.TraceLevel` values)
+</summary>
+</member>
+<member name="P:AltCover.Prepare.TypeTopLevel(System.String[])">
+<summary>
+ Corresponds to command line option `--typetoplevel=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.TypeFilter(System.String[])">
+<summary>
+ Corresponds to command line option `-t, --typeFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.SymbolDirectories(System.String[])">
+<summary>
+ Corresponds to command line option `-y, --symbolDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.StrongNameKey(System.String)">
+<summary>
+ Corresponds to command line option `--sn, --strongNameKey=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.SourceLink(System.Boolean)">
+<summary>
+ Corresponds to command line option `--sourcelink`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.SingleVisit(System.Boolean)">
+<summary>
+ Corresponds to command line option `--single`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.ShowStatic(System.String)">
+<summary>
+ Corresponds to command line option `--showstatic[=VALUE]`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.ShowGenerated(System.Boolean)">
+<summary>
+ Corresponds to command line option ` --showGenerated`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.Save(System.Boolean)">
+<summary>
+ Corresponds to command line option `--save`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.ReportFormat(System.String)">
+<summary>
+ Corresponds to command line option `--reportFormat=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.Report(System.String)">
+<summary>
+ Corresponds to command line option `-r, --report=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.PathFilter(System.String[])">
+<summary>
+ Corresponds to command line option `-p, --pathFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.OutputDirectories(System.String[])">
+<summary>
+ Corresponds to command line option `-o, --outputDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.MethodTopLevel(System.String[])">
+<summary>
+ Corresponds to command line option `--methodtoplevel=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.MethodPoint(System.Boolean)">
+<summary>
+ Corresponds to command line option `--methodpoint`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.MethodFilter(System.String[])">
+<summary>
+ Corresponds to command line option ` -m, --methodFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.LocalSource(System.Boolean)">
+<summary>
+ Corresponds to command line option `-l, --localSource`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.LineCover(System.Boolean)">
+<summary>
+ Corresponds to command line option `--linecover`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.Keys(System.String[])">
+<summary>
+ Corresponds to command line option ` -k, --key=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.InputDirectories(System.String[])">
+<summary>
+ Corresponds to command line option ` -i, --inputDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.InPlace(System.Boolean)">
+<summary>
+ Corresponds to command line option `--inplace`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.FileFilter(System.String[])">
+<summary>
+ Corresponds to command line option `-f, --fileFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.ExposeReturnCode(System.Boolean)">
+<summary>
+ Corresponds to the converse of command line option `--dropReturnCode `
+</summary>
+</member>
+<member name="P:AltCover.Prepare.Dependencies(System.String[])">
+<summary>
+ Corresponds to command line option `-d, --dependency=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.Defer(System.Boolean)">
+<summary>
+ Corresponds to command line option `--defer`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.CommandLine(System.String[])">
+<summary>
+ Corresponds to the command line to run, given after a `-- `
+</summary>
+</member>
+<member name="P:AltCover.Prepare.CallContext(System.String[])">
+<summary>
+ Corresponds to command line option `-c, --callContext=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.BranchCover(System.Boolean)">
+<summary>
+ Corresponds to command line option `--branchcover`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.AttributeTopLevel(System.String[])">
+<summary>
+ Corresponds to command line option --attributetoplevel=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.AttributeFilter(System.String[])">
+<summary>
+ Corresponds to command line option `-a, --attributeFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.AssemblyFilter(System.String[])">
+<summary>
+ Corresponds to command line option `-s, --assemblyFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.AssemblyExcludeFilter(System.String[])">
+<summary>
+ Corresponds to command line option `-e, --assemblyExcludeFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.ZipFile">
+<summary>
+ Corresponds to command line option `--zipfile`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.VisibleBranches">
+<summary>
+ Corresponds to command line option ` -v, --visibleBranches`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.Verbosity">
+<summary>
+ Corresponds to command line option ` -q` (expects names of `System.Diagnostics.TraceLevel` values)
+</summary>
+</member>
+<member name="P:AltCover.Prepare.TypeTopLevel">
+<summary>
+ Corresponds to command line option `--typetoplevel=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.TypeFilter">
+<summary>
+ Corresponds to command line option `-t, --typeFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.SymbolDirectories">
+<summary>
+ Corresponds to command line option `-y, --symbolDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.StrongNameKey">
+<summary>
+ Corresponds to command line option `--sn, --strongNameKey=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.SourceLink">
+<summary>
+ Corresponds to command line option `--sourcelink`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.SingleVisit">
+<summary>
+ Corresponds to command line option `--single`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.ShowStatic">
+<summary>
+ Corresponds to command line option `--showstatic[=VALUE]`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.ShowGenerated">
+<summary>
+ Corresponds to command line option ` --showGenerated`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.Save">
+<summary>
+ Corresponds to command line option `--save`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.ReportFormat">
+<summary>
+ Corresponds to command line option `--reportFormat=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.Report">
+<summary>
+ Corresponds to command line option `-r, --report=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.PathFilter">
+<summary>
+ Corresponds to command line option `-p, --pathFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.OutputDirectories">
+<summary>
+ Corresponds to command line option `-o, --outputDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.MethodTopLevel">
+<summary>
+ Corresponds to command line option `--methodtoplevel=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.MethodPoint">
+<summary>
+ Corresponds to command line option `--methodpoint`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.MethodFilter">
+<summary>
+ Corresponds to command line option ` -m, --methodFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.LocalSource">
+<summary>
+ Corresponds to command line option `-l, --localSource`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.LineCover">
+<summary>
+ Corresponds to command line option `--linecover`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.Keys">
+<summary>
+ Corresponds to command line option ` -k, --key=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.InputDirectories">
+<summary>
+ Corresponds to command line option ` -i, --inputDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.InPlace">
+<summary>
+ Corresponds to command line option `--inplace`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.FileFilter">
+<summary>
+ Corresponds to command line option `-f, --fileFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.ExposeReturnCode">
+<summary>
+ Corresponds to the converse of command line option `--dropReturnCode `
+</summary>
+</member>
+<member name="P:AltCover.Prepare.Dependencies">
+<summary>
+ Corresponds to command line option `-d, --dependency=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.Defer">
+<summary>
+ Corresponds to command line option `--defer`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.CommandLine">
+<summary>
+ Corresponds to the command line to run, given after a `-- `
+</summary>
+</member>
+<member name="P:AltCover.Prepare.CallContext">
+<summary>
+ Corresponds to command line option `-c, --callContext=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.BranchCover">
+<summary>
+ Corresponds to command line option `--branchcover`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.AttributeTopLevel">
+<summary>
+ Corresponds to command line option --attributetoplevel=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.AttributeFilter">
+<summary>
+ Corresponds to command line option `-a, --attributeFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.AssemblyFilter">
+<summary>
+ Corresponds to command line option `-s, --assemblyFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Prepare.AssemblyExcludeFilter">
+<summary>
+ Corresponds to command line option `-e, --assemblyExcludeFilter=VALUE`
+</summary>
+</member>
+<member name="M:AltCover.Prepare.Execute">
+<summary>
+ <para>Perform the operation</para>
+ <returns>The success of the outcome.</returns>
+</summary>
+</member>
+<member name="M:AltCover.Prepare.#ctor">
+<summary>
+ <para>The default constructor</para>
+</summary>
+</member>
+<member name="T:AltCover.Prepare">
+<summary>
+ <para>Description of the `AltCover` command</para>
+</summary>
+</member>
+<member name="P:AltCover.Abstract.ILoggingOptions.Warn">
+<summary>
+ Sink for warning messages
+</summary>
+</member>
+<member name="P:AltCover.Abstract.ILoggingOptions.Info">
+<summary>
+ Sink for informational messages
+</summary>
+</member>
+<member name="P:AltCover.Abstract.ILoggingOptions.Failure">
+<summary>
+ Sink for error messages
+</summary>
+</member>
+<member name="P:AltCover.Abstract.ILoggingOptions.Echo">
+<summary>
+ Sink for command line/usage messages
+</summary>
+</member>
+<member name="T:AltCover.Abstract.ILoggingOptions">
+<summary>
+ Destinations for user level output
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.ZipFile">
+<summary>
+ Corresponds to command line option `--zipfile`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.VisibleBranches">
+<summary>
+ Corresponds to command line option ` -v, --visibleBranches`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.Verbosity">
+<summary>
+ Corresponds to command line option ` -q`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.TypeTopLevel">
+<summary>
+ Corresponds to command line option `--typetoplevel=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.TypeFilter">
+<summary>
+ Corresponds to command line option `-t, --typeFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.SymbolDirectories">
+<summary>
+ Corresponds to command line option `-y, --symbolDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.StrongNameKey">
+<summary>
+ Corresponds to command line option `--sn, --strongNameKey=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.SourceLink">
+<summary>
+ Corresponds to command line option `--sourcelink`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.SingleVisit">
+<summary>
+ Corresponds to command line option `--single`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.ShowStatic">
+<summary>
+ Corresponds to command line option `--showstatic[=VALUE]`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.ShowGenerated">
+<summary>
+ Corresponds to command line option ` --showGenerated`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.Save">
+<summary>
+ Corresponds to command line option `--save`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.ReportFormat">
+<summary>
+ Corresponds to command line option `--reportFormat=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.Report">
+<summary>
+ Corresponds to command line option `-r, --report=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.PathFilter">
+<summary>
+ Corresponds to command line option `-p, --pathFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.OutputDirectories">
+<summary>
+ Corresponds to command line option `-o, --outputDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.MethodTopLevel">
+<summary>
+ Corresponds to command line option `--methodtoplevel=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.MethodPoint">
+<summary>
+ Corresponds to command line option `--methodpoint`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.MethodFilter">
+<summary>
+ Corresponds to command line option ` -m, --methodFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.LocalSource">
+<summary>
+ Corresponds to command line option `-l, --localSource`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.LineCover">
+<summary>
+ Corresponds to command line option `--linecover`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.Keys">
+<summary>
+ Corresponds to command line option ` -k, --key=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.InputDirectories">
+<summary>
+ Corresponds to command line option ` -i, --inputDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.InPlace">
+<summary>
+ Corresponds to command line option `--inplace`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.FileFilter">
+<summary>
+ Corresponds to command line option `-f, --fileFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.ExposeReturnCode">
+<summary>
+ Corresponds to the converse of command line option `--dropReturnCode `
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.Dependencies">
+<summary>
+ Corresponds to command line option `-d, --dependency=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.Defer">
+<summary>
+ Corresponds to command line option `--defer`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.CommandLine">
+<summary>
+ Corresponds to the command line to run, given after a `-- `
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.CallContext">
+<summary>
+ Corresponds to command line option `-c, --callContext=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.BranchCover">
+<summary>
+ Corresponds to command line option `--branchcover`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.AttributeTopLevel">
+<summary>
+ Corresponds to command line option `--attributetoplevel=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.AttributeFilter">
+<summary>
+ Corresponds to command line option `-a, --attributeFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.AssemblyFilter">
+<summary>
+ Corresponds to command line option `-s, --assemblyFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.IPrepareOptions.AssemblyExcludeFilter">
+<summary>
+ Corresponds to command line option `-e, --assemblyExcludeFilter=VALUE`
+</summary>
+</member>
+<member name="T:AltCover.Abstract.IPrepareOptions">
+<summary>
+ <para>Command line options for `AltCover`</para>
+ <para>Usage</para>
+ <example>
+ <code>
+ using Altcover;
+ Abstract.IPrepareOptions prepare = ...
+ </code>
+ or
+ <code>
+ using static Altcover.Abstract;
+ IPrepareOptions prepare = ...
+ </code>
+ </example>
+</summary>
+</member>
+<member name="P:AltCover.Abstract.ICollectOptions.WorkingDirectory">
+<summary>
+ Corresponds to command line option `-w, --workingDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.ICollectOptions.Verbosity">
+<summary>
+ Corresponds to command line option ` -q`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.ICollectOptions.Threshold">
+<summary>
+ Corresponds to command line option `-t, --threshold=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.ICollectOptions.SummaryFormat">
+<summary>
+ Corresponds to command line option `--teamcity[=VALUE]`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.ICollectOptions.RecorderDirectory">
+<summary>
+ Corresponds to command line option `-r, --recorderDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.ICollectOptions.OutputFile">
+<summary>
+ Corresponds to command line option `-o, --outputFile=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.ICollectOptions.LcovReport">
+<summary>
+ Corresponds to command line option `-l, --lcovReport=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.ICollectOptions.ExposeReturnCode">
+<summary>
+ Corresponds to the converse of command line option `--dropReturnCode `
+</summary>
+</member>
+<member name="P:AltCover.Abstract.ICollectOptions.Executable">
+<summary>
+ Corresponds to command line option `-x, --executable=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Abstract.ICollectOptions.CommandLine">
+<summary>
+ Corresponds to the command line arguments for the executable, given after a `-- `
+</summary>
+</member>
+<member name="P:AltCover.Abstract.ICollectOptions.Cobertura">
+<summary>
+ Corresponds to command line option `-c, --cobertura=VALUE`
+</summary>
+</member>
+<member name="T:AltCover.Abstract.ICollectOptions">
+<summary>
+ <para>Command line options for `AltCover Runner`</para>
+ <para>Usage</para>
+ <example>
+ <code>
+ using Altcover;
+ Abstract.ICollectOptions collect = ...
+ </code>
+ or
+ <code>
+ using static Altcover.Abstract;
+ ICollectOptions collect = ...
+ </code>
+ </example>
+</summary>
+</member>
+<member name="T:AltCover.Abstract">
+<summary>
+ This represents the weakly ("stringly") typed equivalent of the command line options
+ as interfaces with the values expressed as read-only properties.
+</summary>
+</member>
+<member name="P:AltCover.Primitive.LoggingOptions.Echo">
+<summary>
+ Sink for command line/usage messages
+</summary>
+</member>
+<member name="P:AltCover.Primitive.LoggingOptions.Failure">
+<summary>
+ Sink for error messages
+</summary>
+</member>
+<member name="P:AltCover.Primitive.LoggingOptions.Warn">
+<summary>
+ Sink for warning messages
+</summary>
+</member>
+<member name="P:AltCover.Primitive.LoggingOptions.Info">
+<summary>
+ Sink for informational messages
+</summary>
+</member>
+<member name="M:AltCover.Primitive.LoggingOptions.Create">
+<summary>
+ Returns an instance that just discards all strings input.
+</summary>
+<returns>a default instance</returns>
+</member>
+<member name="T:AltCover.Primitive.LoggingOptions">
+<summary>
+ Destinations for user level output
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.Verbosity">
+<summary>
+ Corresponds to command line option ` -q`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.ShowGenerated">
+<summary>
+ Corresponds to command line option ` --showGenerated`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.ShowStatic">
+<summary>
+ Corresponds to command line option `--showstatic[=VALUE]`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.VisibleBranches">
+<summary>
+ Corresponds to command line option ` -v, --visibleBranches`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.LocalSource">
+<summary>
+ Corresponds to command line option `-l, --localSource`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.Defer">
+<summary>
+ Corresponds to command line option `--defer`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.SourceLink">
+<summary>
+ Corresponds to command line option `--sourcelink`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.ExposeReturnCode">
+<summary>
+ Corresponds to the converse of command line option `--dropReturnCode `
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.CommandLine">
+<summary>
+ Corresponds to the command line to run, given after a `-- `
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.BranchCover">
+<summary>
+ Corresponds to command line option `--branchcover`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.LineCover">
+<summary>
+ Corresponds to command line option `--linecover`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.SingleVisit">
+<summary>
+ Corresponds to command line option `--single`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.MethodPoint">
+<summary>
+ Corresponds to command line option `--methodpoint`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.ZipFile">
+<summary>
+ Corresponds to command line option `--zipfile`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.Save">
+<summary>
+ Corresponds to command line option `--save`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.InPlace">
+<summary>
+ Corresponds to command line option `--inplace`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.ReportFormat">
+<summary>
+ Corresponds to command line option `--reportFormat=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.CallContext">
+<summary>
+ Corresponds to command line option `-c, --callContext=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.MethodTopLevel">
+<summary>
+ Corresponds to command line option `--methodtoplevel=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.TypeTopLevel">
+<summary>
+ Corresponds to command line option `--typetoplevel=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.AttributeTopLevel">
+<summary>
+ Corresponds to command line option `--attributetoplevel=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.PathFilter">
+<summary>
+ Corresponds to command line option `-p, --pathFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.AttributeFilter">
+<summary>
+ Corresponds to command line option `-a, --attributeFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.MethodFilter">
+<summary>
+ Corresponds to command line option ` -m, --methodFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.TypeFilter">
+<summary>
+ Corresponds to command line option `-t, --typeFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.AssemblyExcludeFilter">
+<summary>
+ Corresponds to command line option `-e, --assemblyExcludeFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.AssemblyFilter">
+<summary>
+ Corresponds to command line option `-s, --assemblyFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.FileFilter">
+<summary>
+ Corresponds to command line option `-f, --fileFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.Report">
+<summary>
+ Corresponds to command line option `-r, --report=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.StrongNameKey">
+<summary>
+ Corresponds to command line option `--sn, --strongNameKey=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.Keys">
+<summary>
+ Corresponds to command line option ` -k, --key=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.Dependencies">
+<summary>
+ Corresponds to command line option `-d, --dependency=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.SymbolDirectories">
+<summary>
+ Corresponds to command line option `-y, --symbolDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.OutputDirectories">
+<summary>
+ Corresponds to command line option `-o, --outputDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.PrepareOptions.InputDirectories">
+<summary>
+ Corresponds to command line option ` -i, --inputDirectory=VALUE`
+</summary>
+</member>
+<member name="M:AltCover.Primitive.PrepareOptions.Create">
+<summary>
+ Returns an instance with all fields empty that has all empty or `false` fields except `ExposeReturnCode`, `OpenCover`, `InPlace` and `Save` are `true`, and `ShowStatic` is `-`
+</summary>
+<returns>a default instance</returns>
+</member>
+<member name="T:AltCover.Primitive.PrepareOptions">
+<summary>
+ <para>Command line options for `AltCover`</para>
+</summary>
+</member>
+<member name="P:AltCover.Primitive.CollectOptions.Verbosity">
+<summary>
+ Corresponds to command line option ` -q`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.CollectOptions.SummaryFormat">
+<summary>
+ Corresponds to command line option `--teamcity[=VALUE]`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.CollectOptions.ExposeReturnCode">
+<summary>
+ Corresponds to the converse of command line option `--dropReturnCode `
+</summary>
+</member>
+<member name="P:AltCover.Primitive.CollectOptions.CommandLine">
+<summary>
+ Corresponds to the command line arguments for the executable, given after a `-- `
+</summary>
+</member>
+<member name="P:AltCover.Primitive.CollectOptions.OutputFile">
+<summary>
+ Corresponds to command line option `-o, --outputFile=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.CollectOptions.Cobertura">
+<summary>
+ Corresponds to command line option `-c, --cobertura=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.CollectOptions.Threshold">
+<summary>
+ Corresponds to command line option `-t, --threshold=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.CollectOptions.LcovReport">
+<summary>
+ Corresponds to command line option `-l, --lcovReport=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.CollectOptions.Executable">
+<summary>
+ Corresponds to command line option `-x, --executable=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.CollectOptions.WorkingDirectory">
+<summary>
+ Corresponds to command line option `-w, --workingDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.Primitive.CollectOptions.RecorderDirectory">
+<summary>
+ Corresponds to command line option `-r, --recorderDirectory=VALUE`
+</summary>
+</member>
+<member name="M:AltCover.Primitive.CollectOptions.Create">
+<summary>
+ Returns an instance with all fields empty save `ExposeReturnCode` being `true`
+</summary>
+<returns>a default instance</returns>
+</member>
+<member name="T:AltCover.Primitive.CollectOptions">
+<summary>
+ <para>Command line options for `AltCover Runner`</para>
+</summary>
+</member>
+<member name="T:AltCover.Primitive">
+<summary>
+ This represents the weakly ("stringly") typed equivalent of the command line options.
+ It is primarily for F# use.  Undocumented methods are compiler generated.
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.Verbosity">
+<summary>
+ Corresponds to command line option ` -q`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.ShowGenerated">
+<summary>
+ Corresponds to command line option ` --showGenerated`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.ShowStatic">
+<summary>
+ Corresponds to command line option `--showstatic[=VALUE]`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.VisibleBranches">
+<summary>
+ Corresponds to command line option ` -v, --visibleBranches`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.LocalSource">
+<summary>
+ Corresponds to command line option `-l, --localSource`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.Defer">
+<summary>
+ Corresponds to command line option `--defer`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.SourceLink">
+<summary>
+ Corresponds to command line option `--sourcelink`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.ExposeReturnCode">
+<summary>
+ Corresponds to the converse of command line option `--dropReturnCode `
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.CommandLine">
+<summary>
+ Corresponds to the command line to run, given after a `-- `
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.BranchCover">
+<summary>
+ Corresponds to command line option `--branchcover`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.LineCover">
+<summary>
+ Corresponds to command line option `--linecover`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.SingleVisit">
+<summary>
+ Corresponds to command line option `--single`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.MethodPoint">
+<summary>
+ Corresponds to command line option `--methodpoint`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.ZipFile">
+<summary>
+ Corresponds to command line option `--zipfile`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.Save">
+<summary>
+ Corresponds to command line option `--save`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.InPlace">
+<summary>
+ Corresponds to command line option `--inplace`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.ReportFormat">
+<summary>
+ Corresponds to command line option `--reportFormat=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.CallContext">
+<summary>
+ Corresponds to command line option `-c, --callContext=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.MethodTopLevel">
+<summary>
+ Corresponds to command line option `--methodtoplevel=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.TypeTopLevel">
+<summary>
+ Corresponds to command line option `--typetoplevel=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.AttributeTopLevel">
+<summary>
+ Corresponds to command line option -`-attributetoplevel=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.PathFilter">
+<summary>
+ Corresponds to command line option `-p, --pathFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.AttributeFilter">
+<summary>
+ Corresponds to command line option `-a, --attributeFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.MethodFilter">
+<summary>
+ Corresponds to command line option ` -m, --methodFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.TypeFilter">
+<summary>
+ Corresponds to command line option `-t, --typeFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.AssemblyExcludeFilter">
+<summary>
+ Corresponds to command line option `-e, --assemblyExcludeFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.AssemblyFilter">
+<summary>
+ Corresponds to command line option `-s, --assemblyFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.FileFilter">
+<summary>
+ Corresponds to command line option `-f, --fileFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.Report">
+<summary>
+ Corresponds to command line option `-r, --report=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.StrongNameKey">
+<summary>
+ Corresponds to command line option `--sn, --strongNameKey=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.Keys">
+<summary>
+ Corresponds to command line option ` -k, --key=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.Dependencies">
+<summary>
+ Corresponds to command line option `-d, --dependency=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.SymbolDirectories">
+<summary>
+ Corresponds to command line option `-y, --symbolDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.OutputDirectories">
+<summary>
+ Corresponds to command line option `-o, --outputDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.PrepareOptions.InputDirectories">
+<summary>
+ Corresponds to command line option ` -i, --inputDirectory=VALUE`
+</summary>
+</member>
+<member name="M:AltCover.TypeSafe.PrepareOptions.Create">
+<summary>
+ returns an instance that has all fields unset/default except `ExposeReturnCode`, `InPlace` and `Save` are `Set`
+</summary>
+<returns>a default instance</returns>
+</member>
+<member name="T:AltCover.TypeSafe.PrepareOptions">
+<summary>
+ <para>Command line options for `AltCover`</para>
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.CollectOptions.Verbosity">
+<summary>
+ Corresponds to command line option ` -q`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.CollectOptions.SummaryFormat">
+<summary>
+ Corresponds to command line option `--teamcity[=VALUE]`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.CollectOptions.ExposeReturnCode">
+<summary>
+ Corresponds to the converse of command line option `--dropReturnCode `
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.CollectOptions.CommandLine">
+<summary>
+ Corresponds to the command line arguments for the executable, given after a `-- `
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.CollectOptions.OutputFile">
+<summary>
+ Corresponds to command line option `-o, --outputFile=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.CollectOptions.Cobertura">
+<summary>
+ Corresponds to command line option `-c, --cobertura=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.CollectOptions.Threshold">
+<summary>
+ Corresponds to command line option `-t, --threshold=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.CollectOptions.LcovReport">
+<summary>
+ Corresponds to command line option `-l, --lcovReport=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.CollectOptions.Executable">
+<summary>
+ Corresponds to command line option `-x, --executable=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.CollectOptions.WorkingDirectory">
+<summary>
+ Corresponds to command line option `-w, --workingDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.CollectOptions.RecorderDirectory">
+<summary>
+ Corresponds to command line option `-r, --recorderDirectory=VALUE`
+</summary>
+</member>
+<member name="M:AltCover.TypeSafe.CollectOptions.Create">
+<summary>
+ Returns an instance with all fields empty save `ExposeReturnCode` being `Set`
+</summary>
+<returns>a default instance</returns>
+</member>
+<member name="T:AltCover.TypeSafe.CollectOptions">
+<summary>
+ <para>Command line options for `AltCover Runner`</para>
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.ReportFormat.OpenCover">
+<summary>
+ OpenCover style
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.ReportFormat.NCover">
+<summary>
+ NCover 1.5.8 style
+</summary>
+</member>
+<member name="M:AltCover.TypeSafe.ReportFormat.AsString">
+<summary>
+ Returns the string to use in the command line
+</summary>
+<returns>the string to be used in the effective command line</returns>
+</member>
+<member name="T:AltCover.TypeSafe.ReportFormat">
+<summary>
+ Corresponds to the desired format of the XML report
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.StaticFormat.ShowZero">
+<summary>
+ include with zero visit count if unvisited
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.StaticFormat.Show">
+<summary>
+ include with negative visit count if unvisited
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.StaticFormat.Default">
+<summary>
+ Don't include
+</summary>
+</member>
+<member name="M:AltCover.TypeSafe.StaticFormat.AsString">
+<summary>
+ Returns the string to use in the command line
+</summary>
+<returns>the string to be used in the effective command line</returns>
+</member>
+<member name="T:AltCover.TypeSafe.StaticFormat">
+<summary>
+ Corresponds to a an option for treating trivial methods
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.SummaryFormat.Many">
+ <summary>
+ <para type="description">Aggregation of the above</para>
+ </summary>
+</member>
+<member name="T:AltCover.TypeSafe.SummaryFormat.BPlus">
+ <summary>
+ <para type="description">OpenCover plus CRAP score plus TeamCity with B for Block representing branch coverage, equivalent to Many [R; O; C]</para>
+ </summary>
+</member>
+<member name="T:AltCover.TypeSafe.SummaryFormat.RPlus">
+ <summary>
+ <para type="description">OpenCover plus CRAP score plus TeamCity with R for bRanch, equivalent to Many [B; O; C]</para>
+ </summary>
+</member>
+<member name="T:AltCover.TypeSafe.SummaryFormat.B">
+ <summary>
+ <para type="description">TeamCity with B for Block representing branch coverage</para>
+ </summary>
+</member>
+<member name="T:AltCover.TypeSafe.SummaryFormat.R">
+ <summary>
+ <para type="description">TeamCity with R for bRanch</para>
+ </summary>
+</member>
+<member name="T:AltCover.TypeSafe.SummaryFormat.C">
+ <summary>
+ <para type="description">Change Risk Anti-Patterns score only</para>
+ </summary>
+</member>
+<member name="T:AltCover.TypeSafe.SummaryFormat.O">
+ <summary>
+ <para type="description">OpenCover classic summary only</para>
+ </summary>
+</member>
+<member name="T:AltCover.TypeSafe.SummaryFormat.N">
+ <summary>
+ <para type="description">No summary, overriding any other value given</para>
+ </summary>
+</member>
+<member name="T:AltCover.TypeSafe.SummaryFormat.Default">
+ <summary>
+ <para type="description">OpenCover format with CRAP score, equivalent to Many [O; C] if no other values given </para>
+ </summary>
+</member>
+<member name="M:AltCover.TypeSafe.SummaryFormat.AsString">
+<summary>
+ Returns the string to use in the command line
+</summary>
+<returns>the string to be used in the effective command line</returns>
+</member>
+<member name="T:AltCover.TypeSafe.SummaryFormat">
+<summary>
+ Corresponds to a summary format choice
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.Context.NoContext">
+<summary>
+ Nothing
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.Context.Context">
+<summary>
+ A type-safe collection
+</summary>
+</member>
+<member name="M:AltCover.TypeSafe.Context.AsStrings">
+<summary>
+ Returns the strings to use in the command line
+</summary>
+<returns>the string to be used in the effective command line</returns>
+</member>
+<member name="T:AltCover.TypeSafe.Context">
+<summary>
+ Corresponds to a collection of context entries
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.ContextItem.TimeItem">
+<summary>
+ A call time granularity
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.ContextItem.AttributeKind">
+<summary>
+ A method-level attribute type
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.ContextItem.AttributeName">
+<summary>
+ A method-level attribute name
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.ContextItem.CallerName">
+<summary>
+ A method name
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.ContextItem.Caller">
+<summary>
+ A method
+</summary>
+</member>
+<member name="M:AltCover.TypeSafe.ContextItem.AsString">
+<summary>
+ Returns the string to use in the command line
+</summary>
+<returns>the string to be used in the effective command line</returns>
+</member>
+<member name="T:AltCover.TypeSafe.ContextItem">
+<summary>
+ Corresponds to a context value
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.Filters.Unfiltered">
+<summary>
+ Nothing
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.Filters.Filters">
+<summary>
+ A type-safe collection
+</summary>
+</member>
+<member name="M:AltCover.TypeSafe.Filters.Join(System.Collections.Generic.IEnumerable{AltCover.TypeSafe.FilterItem})">
+<summary>
+ Joins a set of filter items to this filter
+</summary>
+<param name="filters">The filter items to concatenate with</param>
+<returns>the combined filter</returns>
+</member>
+<member name="M:AltCover.TypeSafe.Filters.AsStrings">
+<summary>
+ Returns the strings to use in the command line
+</summary>
+<returns>the strings to be used in the effective command line</returns>
+</member>
+<member name="T:AltCover.TypeSafe.Filters">
+<summary>
+ Corresponds to a collection of filter entries
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.FilterItem.Raw">
+<summary>
+ A string as would be used on the command line (regex with optional leading `'?`)
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.FilterItem.NegateMatchItem">
+<summary>
+ Apply to items that don't match the regex
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.FilterItem.MatchItem">
+<summary>
+ Apply to items that match the regex
+</summary>
+</member>
+<member name="M:AltCover.TypeSafe.FilterItem.AsString">
+<summary>
+ Returns the string as would be used on the command line (regex with optional leading `'?`)
+</summary>
+<returns>the string to be used in the effective command line</returns>
+</member>
+<member name="T:AltCover.TypeSafe.FilterItem">
+<summary>
+ Corresponds to a filter entry
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.DirectoryPaths.NoDirectories">
+<summary>
+ Nothing
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.DirectoryPaths.DirectoryPaths">
+<summary>
+ A type-safe collection
+</summary>
+</member>
+<member name="M:AltCover.TypeSafe.DirectoryPaths.AsStrings">
+<summary>
+ Returns the strings to use in the command line
+</summary>
+<returns>the strings to be used in the effective command line</returns>
+</member>
+<member name="T:AltCover.TypeSafe.DirectoryPaths">
+<summary>
+ Corresponds to a collection of directories
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.FilePaths.NoPaths">
+<summary>
+ Nothing
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.FilePaths.FilePaths">
+<summary>
+ A type-safe collection
+</summary>
+</member>
+<member name="M:AltCover.TypeSafe.FilePaths.AsStrings">
+<summary>
+ Returns the strings to use in the command line
+</summary>
+<returns>the strings to be used in the effective command line</returns>
+</member>
+<member name="T:AltCover.TypeSafe.FilePaths">
+<summary>
+ Corresponds to a collection of files
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.Flag.Clear">
+<summary>
+ Corresponds to a `false` value
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.Flag.Set">
+<summary>
+ Corresponds to a `true` value
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.Flag.Flag">
+<summary>
+ A type-safe boolean
+</summary>
+</member>
+<member name="M:AltCover.TypeSafe.Flag.AsBool">
+<summary>
+ Returns the effective boolean value
+</summary>
+<returns>the effective boolean value</returns>
+</member>
+<member name="T:AltCover.TypeSafe.Flag">
+<summary>
+ Corresponds to a yes/no choice
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.Threshold.NoThreshold">
+<summary>
+ Nothing
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.Threshold.Threshold">
+<summary>
+ Corresponds to an explicit value
+</summary>
+</member>
+<member name="M:AltCover.TypeSafe.Threshold.AsString">
+<summary>
+ Returns the string to be used in the effective command line
+</summary>
+<returns>the string to be used in the effective command line</returns>
+</member>
+<member name="T:AltCover.TypeSafe.Threshold">
+<summary>
+ Corresponds desired coverage threshold
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.Thresholds.AltMaxCrap">
+<summary>
+ Maximum acceptable CRAP score including methods with no source
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.Thresholds.AltMethods">
+<summary>
+ Minimum method coverage %age including methods with no source
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.Thresholds.MaxCrap">
+<summary>
+ Maximum acceptable CRAP score
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.Thresholds.Methods">
+<summary>
+ Minimum method coverage %age
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.Thresholds.Branches">
+<summary>
+ Minimum branch coverage %age
+</summary>
+</member>
+<member name="P:AltCover.TypeSafe.Thresholds.Statements">
+<summary>
+ Minimum statement (sequence point) coverage %age
+</summary>
+</member>
+<member name="M:AltCover.TypeSafe.Thresholds.Create">
+<summary>
+ Returns an all-zero value
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.Thresholds">
+<summary>
+ Corresponds to the set of options available for coverage thresholds; zero values are ignored
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.CommandLine.NoCommand">
+<summary>
+ Nothing
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.CommandLine.CommandArguments">
+<summary>
+ Strongly typed string collection
+</summary>
+</member>
+<member name="M:AltCover.TypeSafe.CommandLine.AsStrings">
+<summary>
+ Returns the strings to be used in the effective command line
+</summary>
+<returns>the strings to be used in the effective command line</returns>
+</member>
+<member name="T:AltCover.TypeSafe.CommandLine">
+<summary>
+ Corresponds to the values after `-- ` on the command line
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.CommandArgument.CommandArgument">
+<summary>
+ Strongly typed string value
+</summary>
+</member>
+<member name="M:AltCover.TypeSafe.CommandArgument.AsString">
+<summary>
+ Returns the string to be used in the effective command line
+</summary>
+<returns>the string to be used in the effective command line</returns>
+</member>
+<member name="T:AltCover.TypeSafe.CommandArgument">
+<summary>
+ Corresponds to a value after `-- ` on the command line
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.DirectoryPath.NoDirectory">
+<summary>
+ Nothing
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.DirectoryPath.DInfo">
+<summary>
+ A strongly typed directory
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.DirectoryPath.DirectoryPath">
+<summary>
+ A directory path, expanded to an absolute path is supplied as a relative one
+</summary>
+</member>
+<member name="M:AltCover.TypeSafe.DirectoryPath.AsString">
+<summary>
+ Returns the string to be used in the effective command line
+</summary>
+<returns>the string to be used in the effective command line</returns>
+</member>
+<member name="T:AltCover.TypeSafe.DirectoryPath">
+<summary>
+ Corresponds to a directory
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.FilePath.NoFile">
+<summary>
+ Nothing
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.FilePath.FInfo">
+<summary>
+ A strongly typed file
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.FilePath.FilePath">
+<summary>
+ A file path, expanded to an absolute path is supplied as a relative one
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe.FilePath.Tool">
+<summary>
+ A named `dotnet` tool, carried unaltered
+</summary>
+</member>
+<member name="M:AltCover.TypeSafe.FilePath.AsString">
+<summary>
+ Returns the string to be used in the effective command line
+</summary>
+<returns>the string to be used in the effective command line</returns>
+</member>
+<member name="T:AltCover.TypeSafe.FilePath">
+<summary>
+ Corresponds to a file or executable tool
+</summary>
+</member>
+<member name="T:AltCover.TypeSafe">
+<summary>
+ This represents the strongly-typed equivalent of the command line options, with the
+ strong types expressed as F# discriminated unions.  It is not recommented for consumption
+ from C# code.
+</summary>
+</member>
+<member name="T:AltCover.AltCover.LoggingOptions.Abstract">
+<summary>
+ <para>Options expressed as an interface</para>
+</summary>
+</member>
+<member name="T:AltCover.AltCover.LoggingOptions.Primitive">
+<summary>
+ <para>Options expressed as an F# "stringly" typed record</para>
+</summary>
+</member>
+<member name="P:AltCover.AltCover.LoggingOptions.Warn">
+<summary>
+ Sink for warning messages
+</summary>
+</member>
+<member name="P:AltCover.AltCover.LoggingOptions.Info">
+<summary>
+ Sink for informational messages
+</summary>
+</member>
+<member name="P:AltCover.AltCover.LoggingOptions.Error">
+<summary>
+ Sink for error messages
+</summary>
+</member>
+<member name="P:AltCover.AltCover.LoggingOptions.Echo">
+<summary>
+ Sink for command line/usage messages
+</summary>
+</member>
+<member name="M:AltCover.AltCover.LoggingOptions.Translate(AltCover.Abstract.ILoggingOptions)">
+<summary>
+ Translates a C# style interface to the corresponding F# type
+</summary>
+ <param name="options">A C# `Action` based logging description</param>
+ <returns>The F# function equivalent.</returns>
+</member>
+<member name="M:AltCover.AltCover.LoggingOptions.Create">
+<summary>
+ Returns a pure sink (all input ignored) instance
+</summary>
+<returns>a default instance</returns>
+</member>
+<member name="M:AltCover.AltCover.LoggingOptions.ActionAdapter(System.Action{System.String})">
+<summary>
+ A helper for C# use
+</summary>
+ <param name="action">A C# `Action` value e.g. from the `ILoggingOptions` interface</param>
+ <returns>The equivalent F# function, suitable for use as a member value.</returns>
+</member>
+<member name="T:AltCover.AltCover.LoggingOptions">
+<summary>
+ Destinations for user level output
+</summary>
+</member>
+<member name="T:AltCover.AltCover.PrepareOptions.Abstract">
+<summary>
+ <para>Options expressed as an interface</para>
+</summary>
+</member>
+<member name="T:AltCover.AltCover.PrepareOptions.TypeSafe">
+<summary>
+ <para>Options expressed as an F# strongly-typed record</para>
+</summary>
+</member>
+<member name="T:AltCover.AltCover.PrepareOptions.Primitive">
+<summary>
+ <para>Options expressed as an F# "stringly" typed record</para>
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.ZipFile">
+<summary>
+ Corresponds to command line option `--zipfile`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.VisibleBranches">
+<summary>
+ Corresponds to command line option ` -v, --visibleBranches`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.Verbosity">
+<summary>
+ Corresponds to command line option ` -q`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.TypeTopLevel">
+<summary>
+ Corresponds to command line option `--typetoplevel=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.TypeFilter">
+<summary>
+ Corresponds to command line option `-t, --typeFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.SymbolDirectories">
+<summary>
+ Corresponds to command line option `-y, --symbolDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.StrongNameKey">
+<summary>
+ Corresponds to command line option `--sn, --strongNameKey=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.SourceLink">
+<summary>
+ Corresponds to command line option `--sourcelink`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.SingleVisit">
+<summary>
+ Corresponds to command line option `--single`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.ShowStatic">
+<summary>
+ Corresponds to command line option `--showstatic[=VALUE]`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.ShowGenerated">
+<summary>
+ Corresponds to command line option ` --showGenerated`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.Save">
+<summary>
+ Corresponds to command line option `--save`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.ReportFormat">
+<summary>
+ Corresponds to command line option `--reportFormat=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.Report">
+<summary>
+ Corresponds to command line option `-r, --report=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.PathFilter">
+<summary>
+ Corresponds to command line option `-p, --pathFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.OutputDirectories">
+<summary>
+ Corresponds to command line option `-o, --outputDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.MethodTopLevel">
+<summary>
+ Corresponds to command line option `--methodtoplevel=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.MethodPoint">
+<summary>
+ Corresponds to command line option `--methodpoint`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.MethodFilter">
+<summary>
+ Corresponds to command line option ` -m, --methodFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.LocalSource">
+<summary>
+ Corresponds to command line option `-l, --localSource`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.LineCover">
+<summary>
+ Corresponds to command line option `--linecover`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.Keys">
+<summary>
+ Corresponds to command line option ` -k, --key=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.InputDirectories">
+<summary>
+ Corresponds to command line option ` -i, --inputDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.InPlace">
+<summary>
+ Corresponds to command line option `--inplace`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.FileFilter">
+<summary>
+ Corresponds to command line option `-f, --fileFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.ExposeReturnCode">
+<summary>
+ Corresponds to the converse of command line option `--dropReturnCode `
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.Dependencies">
+<summary>
+ Corresponds to command line option `-d, --dependency=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.Defer">
+<summary>
+ Corresponds to command line option `--defer`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.CommandLine">
+<summary>
+ Corresponds to the command line to run, given after a `-- `
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.CallContext">
+<summary>
+ Corresponds to command line option `-c, --callContext=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.BranchCover">
+<summary>
+ Corresponds to command line option `--branchcover`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.AttributeTopLevel">
+<summary>
+ Corresponds to command line option --attributetoplevel=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.AttributeFilter">
+<summary>
+ Corresponds to command line option `-a, --attributeFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.AssemblyFilter">
+<summary>
+ Corresponds to command line option `-s, --assemblyFilter=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.PrepareOptions.AssemblyExcludeFilter">
+<summary>
+ Corresponds to command line option `-e, --assemblyExcludeFilter=VALUE`
+</summary>
+</member>
+<member name="M:AltCover.AltCover.PrepareOptions.Validate">
+<summary>
+ Does simple checking of the arguments without causing any changes to the system
+</summary>
+ <returns>All the problems that the application command-line could report, so empty is success.</returns>
+</member>
+<member name="T:AltCover.AltCover.PrepareOptions">
+<summary>
+ <para>Command line options for `AltCover`</para>
+</summary>
+</member>
+<member name="T:AltCover.AltCover.CollectOptions.Abstract">
+<summary>
+ <para>Options expressed as an interface</para>
+</summary>
+</member>
+<member name="T:AltCover.AltCover.CollectOptions.TypeSafe">
+<summary>
+ <para>Options expressed as an F# strongly-typed record</para>
+</summary>
+</member>
+<member name="T:AltCover.AltCover.CollectOptions.Primitive">
+<summary>
+ <para>Options expressed as an F# "stringly" typed record</para>
+</summary>
+</member>
+<member name="P:AltCover.AltCover.CollectOptions.WorkingDirectory">
+<summary>
+ Corresponds to command line option `-w, --workingDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.CollectOptions.Verbosity">
+<summary>
+ Corresponds to command line option ` -q`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.CollectOptions.Threshold">
+<summary>
+ Corresponds to command line option `-t, --threshold=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.CollectOptions.SummaryFormat">
+<summary>
+ Corresponds to command line option `--teamcity[=VALUE]`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.CollectOptions.RecorderDirectory">
+<summary>
+ Corresponds to command line option `-r, --recorderDirectory=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.CollectOptions.OutputFile">
+<summary>
+ Corresponds to command line option `-o, --outputFile=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.CollectOptions.LcovReport">
+<summary>
+ Corresponds to command line option `-l, --lcovReport=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.CollectOptions.ExposeReturnCode">
+<summary>
+ Corresponds to the converse of command line option `--dropReturnCode `
+</summary>
+</member>
+<member name="P:AltCover.AltCover.CollectOptions.Executable">
+<summary>
+ Corresponds to command line option `-x, --executable=VALUE`
+</summary>
+</member>
+<member name="P:AltCover.AltCover.CollectOptions.CommandLine">
+<summary>
+ Corresponds to the command line arguments for the executable, given after a `-- `
+</summary>
+</member>
+<member name="P:AltCover.AltCover.CollectOptions.Cobertura">
+<summary>
+ Corresponds to command line option `-c, --cobertura=VALUE`
+</summary>
+</member>
+<member name="M:AltCover.AltCover.CollectOptions.Validate(System.Boolean)">
+<summary>
+ Does simple checking of the arguments without causing any changes to the system
+</summary>
+ <param name="afterPreparation">`true` if the Prepare step has already run and there should be instrumented code the `RecorderDirectory`</param>
+ <returns>All the problems that the application command-line could report, so empty is success.</returns>
+</member>
+<member name="T:AltCover.AltCover.CollectOptions">
+<summary>
+ <para>Command line options for `AltCover Runner`</para>
+</summary>
+</member>
+<member name="P:AltCover.AltCover.ValidatedCommandLine.Errors">
+<summary>
+ Any validations errors in `Errors`.
+</summary>
+</member>
+<member name="P:AltCover.AltCover.ValidatedCommandLine.Command">
+<summary>
+ The composed command line in `Command`
+</summary>
+</member>
+<member name="M:AltCover.AltCover.ValidatedCommandLine.ToString">
+<summary>
+ Returns a nicely formatted representation
+</summary>
+<returns>a nicely formatted representation</returns>
+</member>
+<member name="T:AltCover.AltCover.ValidatedCommandLine">
+<summary>
+ Holds the composed command line and any validation errors.
+</summary>
+</member>
+<member name="T:AltCover.AltCover">
+<summary>
+ This represents the  command line options and its validation
+</summary>
+</member>
+<member name="M:AltCover.WhatIfExtension.WhatIf(AltCover.Abstract.IPrepareOptions)">
+<summary>
+ Validates the supplied options (the `this` parameter)
+</summary>
+ <returns>The validation outcome.</returns>
+</member>
+<member name="M:AltCover.WhatIfExtension.WhatIf(AltCover.Abstract.ICollectOptions,System.Boolean)">
+<summary>
+ Validates the supplied options (the `this` parameter)
+</summary>
+ <param name="afterPreparation">Values indicating whether the instrumentation has already taken place</param>
+ <returns>The validation outcome.</returns>
+</member>
+<member name="T:AltCover.WhatIfExtension">
+<summary>
+ F#-style I&lt;Whatever&gt;Options extension methods
+</summary>
+</member>
+<member name="M:AltCover.CollectExtension.WhatIf(AltCover.Abstract.ICollectOptions,System.Boolean)">
+<summary>
+ Validates the supplied options
+</summary>
+ <param name="collect">The options</param>
+ <param name="afterPreparation">Values indicating whether the instrumentation has already taken place</param>
+ <returns>The validation outcome.</returns>
+</member>
+<member name="T:AltCover.CollectExtension">
+<summary>
+ `Abstract.ICollectOptions` extension methods
+</summary>
+</member>
+<member name="M:AltCover.PrepareExtension.WhatIf(AltCover.Abstract.IPrepareOptions)">
+<summary>
+ Validates the supplied options
+</summary>
+ <param name="prepare">The options</param>
+ <returns>The validation outcome.</returns>
+</member>
+<member name="T:AltCover.PrepareExtension">
+<summary>
+ no doc
+&lt;summary&gt;
+ `Abstract.IPrepareOptions` extension methods
+&lt;/summary&gt;
+</summary>
+</member>
+<member name="M:AltCover.Command.Summary">
+<summary>
+ Return the last computed coverage summary
+</summary>
+ <returns>The last computed coverage summary.</returns>
+</member>
+<member name="M:AltCover.Command.FormattedVersion">
+<summary>
+ Indicate the current version
+</summary>
+ <returns>The version as a string.</returns>
+</member>
+<member name="M:AltCover.Command.Version">
+<summary>
+ Indicate the current version
+</summary>
+ <returns>The strongly-typed version.</returns>
+</member>
+<member name="M:AltCover.Command.ImportModule">
+<summary>
+ Indicate how to consume for PowerShell
+</summary>
+ <returns>The `Import-Module` command required.</returns>
+</member>
+<member name="M:AltCover.Command.Collect(AltCover.Abstract.ICollectOptions,AltCover.AltCover.LoggingOptions)">
+<summary>
+ Process coverage
+</summary>
+ <param name="args">The command line</param>
+ <param name="log">How to report feedback</param>
+ <returns>operation return code.</returns>
+</member>
+<member name="M:AltCover.Command.Prepare(AltCover.Abstract.IPrepareOptions,AltCover.AltCover.LoggingOptions)">
+<summary>
+ Instrument assemblies
+</summary>
+ <param name="args">The command line</param>
+ <param name="log">How to report feedback</param>
+ <returns>operation return code.</returns>
+</member>
+<member name="T:AltCover.Command">
+<summary>
+ This represents the various operations available
+</summary>
+</member>
+</members>
+</doc>

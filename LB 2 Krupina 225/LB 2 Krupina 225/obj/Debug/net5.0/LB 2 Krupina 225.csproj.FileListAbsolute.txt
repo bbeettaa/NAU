@@ -1,0 +1,69 @@
+C:\Users\bedu_s_bashkoy\source\repos\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\InputOutput.deps.json
+C:\Users\bedu_s_bashkoy\source\repos\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\InputOutput.runtimeconfig.json
+C:\Users\bedu_s_bashkoy\source\repos\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\InputOutput.runtimeconfig.dev.json
+C:\Users\bedu_s_bashkoy\source\repos\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\InputOutput.exe
+C:\Users\bedu_s_bashkoy\source\repos\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\LB 2 Krupina 225.exe
+C:\Users\bedu_s_bashkoy\source\repos\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\LB 2 Krupina 225.deps.json
+C:\Users\bedu_s_bashkoy\source\repos\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\LB 2 Krupina 225.runtimeconfig.json
+C:\Users\bedu_s_bashkoy\source\repos\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\LB 2 Krupina 225.runtimeconfig.dev.json
+C:\Users\bedu_s_bashkoy\source\repos\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\LB 2 Krupina 225.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\ref\LB 2 Krupina 225.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\LB 2 Krupina 225.pdb
+C:\Users\bedu_s_bashkoy\source\repos\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\InputOutput.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\InputOutput.pdb
+C:\Users\bedu_s_bashkoy\source\repos\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.csproj.AssemblyReference.cache
+C:\Users\bedu_s_bashkoy\source\repos\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bedu_s_bashkoy\source\repos\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.AssemblyInfoInputs.cache
+C:\Users\bedu_s_bashkoy\source\repos\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.AssemblyInfo.cs
+C:\Users\bedu_s_bashkoy\source\repos\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.csproj.CoreCompileInputs.cache
+C:\Users\bedu_s_bashkoy\source\repos\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.csproj.CopyComplete
+C:\Users\bedu_s_bashkoy\source\repos\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\ref\LB 2 Krupina 225.dll
+C:\Users\bedu_s_bashkoy\source\repos\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.pdb
+C:\Users\bedu_s_bashkoy\source\repos\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.genruntimeconfig.cache
+C:\Users\bedu_s_bashkoy\Desktop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\InputOutput.deps.json
+C:\Users\bedu_s_bashkoy\Desktop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\InputOutput.runtimeconfig.json
+C:\Users\bedu_s_bashkoy\Desktop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\InputOutput.runtimeconfig.dev.json
+C:\Users\bedu_s_bashkoy\Desktop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\InputOutput.exe
+C:\Users\bedu_s_bashkoy\Desktop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\LB 2 Krupina 225.exe
+C:\Users\bedu_s_bashkoy\Desktop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\LB 2 Krupina 225.deps.json
+C:\Users\bedu_s_bashkoy\Desktop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\LB 2 Krupina 225.runtimeconfig.json
+C:\Users\bedu_s_bashkoy\Desktop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\LB 2 Krupina 225.runtimeconfig.dev.json
+C:\Users\bedu_s_bashkoy\Desktop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\LB 2 Krupina 225.dll
+C:\Users\bedu_s_bashkoy\Desktop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\ref\LB 2 Krupina 225.dll
+C:\Users\bedu_s_bashkoy\Desktop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\LB 2 Krupina 225.pdb
+C:\Users\bedu_s_bashkoy\Desktop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\InputOutput.dll
+C:\Users\bedu_s_bashkoy\Desktop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\InputOutput.pdb
+C:\Users\bedu_s_bashkoy\Desktop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.csproj.AssemblyReference.cache
+C:\Users\bedu_s_bashkoy\Desktop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bedu_s_bashkoy\Desktop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.AssemblyInfoInputs.cache
+C:\Users\bedu_s_bashkoy\Desktop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.AssemblyInfo.cs
+C:\Users\bedu_s_bashkoy\Desktop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.csproj.CoreCompileInputs.cache
+C:\Users\bedu_s_bashkoy\Desktop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.csproj.CopyComplete
+C:\Users\bedu_s_bashkoy\Desktop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.dll
+C:\Users\bedu_s_bashkoy\Desktop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\ref\LB 2 Krupina 225.dll
+C:\Users\bedu_s_bashkoy\Desktop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.pdb
+C:\Users\bedu_s_bashkoy\Desktop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.genruntimeconfig.cache
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\InputOutput.deps.json
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\InputOutput.runtimeconfig.json
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\InputOutput.runtimeconfig.dev.json
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\InputOutput.exe
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\LB 2 Krupina 225.exe
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\LB 2 Krupina 225.deps.json
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\LB 2 Krupina 225.runtimeconfig.json
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\LB 2 Krupina 225.runtimeconfig.dev.json
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\LB 2 Krupina 225.dll
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\ref\LB 2 Krupina 225.dll
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\LB 2 Krupina 225.pdb
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\InputOutput.dll
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\bin\Debug\net5.0\InputOutput.pdb
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.csproj.AssemblyReference.cache
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.AssemblyInfoInputs.cache
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.AssemblyInfo.cs
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.csproj.CoreCompileInputs.cache
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.csproj.CopyComplete
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.dll
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\ref\LB 2 Krupina 225.dll
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.pdb
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 2\LB 2 Krupina 225\LB 2 Krupina 225\obj\Debug\net5.0\LB 2 Krupina 225.genruntimeconfig.cache

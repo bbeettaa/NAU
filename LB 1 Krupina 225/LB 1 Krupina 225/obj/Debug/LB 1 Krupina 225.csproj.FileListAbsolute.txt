@@ -1,0 +1,22 @@
+C:\Users\bedu_s_bashkoy\source\repos\LB 1 Krupina 225\LB 1 Krupina 225\obj\Debug\LB 1 Krupina 225.csproj.CoreCompileInputs.cache
+C:\Users\bedu_s_bashkoy\source\repos\LB 1 Krupina 225\LB 1 Krupina 225\bin\Debug\LB 1 Krupina 225.exe.config
+C:\Users\bedu_s_bashkoy\source\repos\LB 1 Krupina 225\LB 1 Krupina 225\bin\Debug\LB 1 Krupina 225.exe
+C:\Users\bedu_s_bashkoy\source\repos\LB 1 Krupina 225\LB 1 Krupina 225\bin\Debug\LB 1 Krupina 225.pdb
+C:\Users\bedu_s_bashkoy\source\repos\LB 1 Krupina 225\LB 1 Krupina 225\obj\Debug\LB 1 Krupina 225.exe
+C:\Users\bedu_s_bashkoy\source\repos\LB 1 Krupina 225\LB 1 Krupina 225\obj\Debug\LB 1 Krupina 225.pdb
+C:\Users\bedu_s_bashkoy\source\repos\LB 1 Krupina 225\LB 1 Krupina 225\bin\Debug\InputOutput.exe
+C:\Users\bedu_s_bashkoy\source\repos\LB 1 Krupina 225\LB 1 Krupina 225\bin\Debug\InputOutput.pdb
+C:\Users\bedu_s_bashkoy\source\repos\LB 1 Krupina 225\LB 1 Krupina 225\bin\Debug\InputOutput.exe.config
+C:\Users\bedu_s_bashkoy\source\repos\LB 1 Krupina 225\LB 1 Krupina 225\obj\Debug\LB 1 Krupina 225.csproj.CopyComplete
+C:\Users\bedu_s_bashkoy\source\repos\LB 1 Krupina 225\LB 1 Krupina 225\obj\Debug\LB 1 Krupina 225.csproj.AssemblyReference.cache
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 1\LB 1 Krupina 225\LB 1 Krupina 225\bin\Debug\LB 1 Krupina 225.exe.config
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 1\LB 1 Krupina 225\LB 1 Krupina 225\bin\Debug\LB 1 Krupina 225.exe
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 1\LB 1 Krupina 225\LB 1 Krupina 225\bin\Debug\LB 1 Krupina 225.pdb
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 1\LB 1 Krupina 225\LB 1 Krupina 225\bin\Debug\InputOutput.exe
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 1\LB 1 Krupina 225\LB 1 Krupina 225\bin\Debug\InputOutput.pdb
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 1\LB 1 Krupina 225\LB 1 Krupina 225\bin\Debug\InputOutput.exe.config
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 1\LB 1 Krupina 225\LB 1 Krupina 225\obj\Debug\LB 1 Krupina 225.csproj.AssemblyReference.cache
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 1\LB 1 Krupina 225\LB 1 Krupina 225\obj\Debug\LB 1 Krupina 225.csproj.CoreCompileInputs.cache
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 1\LB 1 Krupina 225\LB 1 Krupina 225\obj\Debug\LB 1 Krupina 225.csproj.CopyComplete
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 1\LB 1 Krupina 225\LB 1 Krupina 225\obj\Debug\LB 1 Krupina 225.exe
+C:\Users\bedu_s_bashkoy\Desktop\NAU\oop\Lab 1\LB 1 Krupina 225\LB 1 Krupina 225\obj\Debug\LB 1 Krupina 225.pdb

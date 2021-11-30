@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LB 1 Krupina 225", "LB 1 Krupina 225\LB 1 Krupina 225.csproj", "{5165C913-9D7C-4B7F-863C-1061D2DD8013}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F51BDE4E-E7A5-4AEE-BBDE-6F927D55001C} = {F51BDE4E-E7A5-4AEE-BBDE-6F927D55001C}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InputOutput", "InputOutput\InputOutput.csproj", "{F51BDE4E-E7A5-4AEE-BBDE-6F927D55001C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5165C913-9D7C-4B7F-863C-1061D2DD8013}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5165C913-9D7C-4B7F-863C-1061D2DD8013}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5165C913-9D7C-4B7F-863C-1061D2DD8013}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5165C913-9D7C-4B7F-863C-1061D2DD8013}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F51BDE4E-E7A5-4AEE-BBDE-6F927D55001C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F51BDE4E-E7A5-4AEE-BBDE-6F927D55001C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F51BDE4E-E7A5-4AEE-BBDE-6F927D55001C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F51BDE4E-E7A5-4AEE-BBDE-6F927D55001C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {185BC5F7-5364-4314-8F34-79F0C79B1516}
+	EndGlobalSection
+EndGlobal

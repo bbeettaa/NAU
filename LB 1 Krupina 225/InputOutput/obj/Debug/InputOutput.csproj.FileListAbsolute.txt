@@ -1,0 +1,7 @@
+C:\Users\bedu_s_bashkoy\source\repos\LB 1 Krupina 225\InputOutput\obj\Debug\InputOutput.csproj.CoreCompileInputs.cache
+C:\Users\bedu_s_bashkoy\source\repos\LB 1 Krupina 225\InputOutput\bin\Debug\InputOutput.exe.config
+C:\Users\bedu_s_bashkoy\source\repos\LB 1 Krupina 225\InputOutput\bin\Debug\InputOutput.exe
+C:\Users\bedu_s_bashkoy\source\repos\LB 1 Krupina 225\InputOutput\bin\Debug\InputOutput.pdb
+C:\Users\bedu_s_bashkoy\source\repos\LB 1 Krupina 225\InputOutput\obj\Debug\InputOutput.exe
+C:\Users\bedu_s_bashkoy\source\repos\LB 1 Krupina 225\InputOutput\obj\Debug\InputOutput.pdb
+C:\Users\bedu_s_bashkoy\source\repos\LB 1 Krupina 225\InputOutput\obj\Debug\InputOutput.csproj.AssemblyReference.cache
