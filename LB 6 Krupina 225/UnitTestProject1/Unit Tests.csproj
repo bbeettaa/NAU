@@ -89,7 +89,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL Test.cs" />
+    <Compile Include="EntityService_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Test Student.cs" />
   </ItemGroup>

@@ -48,7 +48,7 @@ namespace PL
             this.операціїЗіСтудентамиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CountPercentOfFirstCourseArrivalsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поселенняВГуртожитокПриToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -96,7 +96,7 @@ namespace PL
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(221, 22);
             this.toolStripMenuItem2.Text = "Видалити об\'єкт";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.dellObject_toolStripMenuItem2_Click);
             // 
             // toolStripMenuItem3
             // 
@@ -196,27 +196,28 @@ namespace PL
             this.поселенняВГуртожитокПриToolStripMenuItem.Text = "Поселення в гуртожиток приїхавших з іншого міста";
             this.поселенняВГуртожитокПриToolStripMenuItem.Click += new System.EventHandler(this.HostelArrivalStudToolStripMenuItem_Click);
             // 
-            // listView1
+            // listView
             // 
-            this.listView1.AutoArrange = false;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listView.AutoArrange = false;
+            this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
-            this.listView1.ContextMenuStrip = this.viewList_contextMenuStrip;
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.listView1.LabelWrap = false;
-            this.listView1.Location = new System.Drawing.Point(12, 38);
-            this.listView1.MultiSelect = false;
-            this.listView1.Name = "listView1";
-            this.listView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.listView1.Size = new System.Drawing.Size(240, 353);
-            this.listView1.TabIndex = 11;
-            this.listView1.TileSize = new System.Drawing.Size(228, 18);
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Tile;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.listView.ContextMenuStrip = this.viewList_contextMenuStrip;
+            this.listView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listView.GridLines = true;
+            this.listView.HideSelection = false;
+            this.listView.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.listView.LabelWrap = false;
+            this.listView.Location = new System.Drawing.Point(12, 38);
+            this.listView.MultiSelect = false;
+            this.listView.Name = "listView";
+            this.listView.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.listView.Size = new System.Drawing.Size(325, 353);
+            this.listView.TabIndex = 11;
+            this.listView.TileSize = new System.Drawing.Size(228, 18);
+            this.listView.UseCompatibleStateImageBehavior = false;
+            this.listView.View = System.Windows.Forms.View.Tile;
+            this.listView.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.listView.Click += new System.EventHandler(this.listView_Click);
             // 
             // columnHeader1
             // 
@@ -226,7 +227,7 @@ namespace PL
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(544, 15);
+            this.label3.Location = new System.Drawing.Point(358, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 16);
             this.label3.TabIndex = 8;
@@ -238,10 +239,10 @@ namespace PL
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBox1.Location = new System.Drawing.Point(547, 38);
+            this.comboBox1.Location = new System.Drawing.Point(361, 180);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBox1.Size = new System.Drawing.Size(240, 24);
+            this.comboBox1.Size = new System.Drawing.Size(90, 24);
             this.comboBox1.TabIndex = 6;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -249,7 +250,7 @@ namespace PL
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(276, 15);
+            this.label1.Location = new System.Drawing.Point(461, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 16);
             this.label1.TabIndex = 5;
@@ -260,20 +261,20 @@ namespace PL
             this.listBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(279, 38);
+            this.listBox2.Location = new System.Drawing.Point(464, 38);
             this.listBox2.Name = "listBox2";
             this.listBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.listBox2.Size = new System.Drawing.Size(240, 308);
+            this.listBox2.Size = new System.Drawing.Size(325, 324);
             this.listBox2.TabIndex = 4;
-            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.ListBox2_SelectedIndexChanged);
+            this.listBox2.Click += new System.EventHandler(this.listBox2_Click);
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(279, 371);
+            this.textBox2.Location = new System.Drawing.Point(464, 369);
             this.textBox2.Name = "textBox2";
             this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox2.Size = new System.Drawing.Size(240, 22);
+            this.textBox2.Size = new System.Drawing.Size(325, 22);
             this.textBox2.TabIndex = 2;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -283,7 +284,7 @@ namespace PL
             this.textBox1.Location = new System.Drawing.Point(12, 12);
             this.textBox1.Name = "textBox1";
             this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox1.Size = new System.Drawing.Size(240, 22);
+            this.textBox1.Size = new System.Drawing.Size(325, 22);
             this.textBox1.TabIndex = 1;
             this.textBox1.Tag = "Пошук об\'єкту";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -294,7 +295,7 @@ namespace PL
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(801, 410);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listView);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -315,7 +316,7 @@ namespace PL
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem AddObjectStripMenuItem;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox3;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listView;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;

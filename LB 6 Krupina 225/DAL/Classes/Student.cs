@@ -37,6 +37,7 @@ namespace ProgramClasses
                 if (propertyNum < typeof(Person).GetProperties().Length)
                     if (base.ChangeProperties(propertyNum, value))
                         return true;
+                    else return false;
 
                     propertyNum -= typeof(Person).GetProperties().Length;
 

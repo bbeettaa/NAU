@@ -39,6 +39,19 @@ namespace DALWorckWithDataBases
         }
 
 
+
+        public String GetObjCategory(object obj)
+        { return (obj as AbstractPerson).GroupCollection; }
+
+
+
+
+
+
+
+
+
+
         public static List<String> GetObjNames(List<Object> objList)
         {
             List<Type> typesArr = AbstractPerson.GetAssemblyTypes();
@@ -61,10 +74,9 @@ namespace DALWorckWithDataBases
         { return (obj as AbstractClass).GetObjNameProp().ToList<String>(); }
         public static List<String> GetMethodsInfo(Object obj)
         { return (obj as AbstractClass).GetMethodsInfo().ToList<String>(); }
-        public List<Object> FindObjects(String find)
+        public List<Object> FindObjects(String find, List<Object> objList)
         {
-            objList = Deserialize();
-
+ 
             List<Object> list = new List<Object>();
             foreach (var obj in objList)
                 if ((obj as AbstractClass) != null &&
@@ -77,7 +89,7 @@ namespace DALWorckWithDataBases
 
 
 
-        public List<Object> Deserialize()
+        virtual public List<Object> Deserialize()
         {
             objList = dataProvider[IndexOfDataprovider].Deserialize();
             return objList;
@@ -131,7 +143,7 @@ namespace DALWorckWithDataBases
             Object obj = Activator.CreateInstance(type);
             return obj;
         }
-        public void SavePacketIntoDatabase()
+        public void SavePacketIntoDatabase(List<object> objList)
         {
             dataProvider[IndexOfDataprovider].CheckFile();
             CreatePacketFromList(objList);
@@ -203,12 +215,14 @@ namespace DALWorckWithDataBases
             (obj as AbstractPerson).GroupCollection = group;
         }
 
-        public void RenameGroupOfObject(String newName, List<object> objList,int index)
+        public List<object> RenameGroupOfObject(String newName, List<object> objList,int index)
         {
             String oldGroup = (objList[index] as AbstractPerson).GroupCollection;
             foreach(var obje in objList)
                 if((obje as AbstractPerson).GroupCollection == oldGroup)
                     (obje as AbstractPerson).GroupCollection = newName;
+
+            return objList;
         }
 
         public void HideGroups(List<Object> objList)

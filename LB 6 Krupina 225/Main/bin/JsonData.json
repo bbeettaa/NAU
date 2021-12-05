@@ -1,36 +1,24 @@
 {
   "students": [
     {
-      "StudentID": "10200-000",
-      "Course": "1",
-      "FavoriteDance": "Unknown",
-      "Hostel": "000.00",
+      "StudentID": "00412-355",
+      "Course": "2",
+      "FavoriteDance": "ww",
+      "Hostel": "101.01",
       "FirstName": "S",
       "LastName": "I",
-      "ArivalCity": "Kyiv",
-      "PassportSer": "00000000",
-      "PassportNo": "00000-000",
+      "ArivalCity": "EE",
+      "PassportSer": "00120000",
+      "PassportNo": "00012-000",
       "GroupCollection": "\u0421\u0442\u0443\u0434\u0435\u043D\u0442\u044B"
     },
     {
-      "StudentID": "-1",
+      "StudentID": "10000-000",
       "Course": "1",
       "FavoriteDance": "Unknown",
       "Hostel": "101.01",
       "FirstName": "S",
       "LastName": "II",
-      "ArivalCity": "EE",
-      "PassportSer": "00000000",
-      "PassportNo": "00000-000",
-      "GroupCollection": "\u0421\u0442\u0443\u0434\u0435\u043D\u0442\u044B"
-    },
-    {
-      "StudentID": "-1",
-      "Course": "1",
-      "FavoriteDance": "Unknown",
-      "Hostel": "101.01",
-      "FirstName": "S",
-      "LastName": "III",
       "ArivalCity": "ER",
       "PassportSer": "00000000",
       "PassportNo": "00000-000",
@@ -42,7 +30,7 @@
       "FavoriteDance": "Unknown",
       "Hostel": "101.01",
       "FirstName": "S",
-      "LastName": "IV",
+      "LastName": "III",
       "ArivalCity": "BB",
       "PassportSer": "00120000",
       "PassportNo": "00400-005",
@@ -50,12 +38,24 @@
     },
     {
       "StudentID": "44444-444",
-      "Course": "1",
+      "Course": "2",
       "FavoriteDance": "Unknown",
       "Hostel": "101.01",
       "FirstName": "S",
-      "LastName": "V",
+      "LastName": "IV",
       "ArivalCity": "DH",
+      "PassportSer": "00000000",
+      "PassportNo": "00000-000",
+      "GroupCollection": "\u0421\u0442\u0443\u0434\u0435\u043D\u0442\u044B"
+    },
+    {
+      "StudentID": "-1",
+      "Course": "0",
+      "FavoriteDance": "Unknown",
+      "Hostel": "000.00",
+      "FirstName": "S",
+      "LastName": "VI",
+      "ArivalCity": "I",
       "PassportSer": "00000000",
       "PassportNo": "00000000",
       "GroupCollection": "\u0421\u0442\u0443\u0434\u0435\u043D\u0442\u044B"
@@ -77,7 +77,7 @@
       "DriverLicense": "00000-000",
       "CarriesPassenger": "No",
       "Age": "15",
-      "FirstName": "All",
+      "FirstName": "AllOne",
       "LastName": "II",
       "ArivalCity": "rtrt",
       "PassportSer": "00000000",
@@ -105,6 +105,28 @@
       "PassportSer": "00000000",
       "PassportNo": "10000-000",
       "GroupCollection": "All"
+    },
+    {
+      "DriverLicense": "00000-000",
+      "CarriesPassenger": "No",
+      "Age": "18",
+      "FirstName": "Undefined",
+      "LastName": "Undefined",
+      "ArivalCity": "Undefined",
+      "PassportSer": "00000000",
+      "PassportNo": "00000000",
+      "GroupCollection": "Default"
+    },
+    {
+      "DriverLicense": "00000-000",
+      "CarriesPassenger": "No",
+      "Age": "18",
+      "FirstName": "Undefined",
+      "LastName": "Undefined",
+      "ArivalCity": "Undefined",
+      "PassportSer": "00000000",
+      "PassportNo": "00000000",
+      "GroupCollection": "Default"
     }
   ],
   "acrobats": [
@@ -113,7 +135,7 @@
       "FavoriteDance": "Unknown",
       "Age": "19",
       "DriverLicense": "00000-000",
-      "FirstName": "ACCC",
+      "FirstName": "AC",
       "LastName": "Undefined",
       "ArivalCity": "Undefined",
       "PassportSer": "00000000",
@@ -133,16 +155,64 @@
       "GroupCollection": "Acrobats"
     },
     {
-      "AcrobatTechnique": "Acrobatic jumps",
+      "AcrobatTechnique": "Flip",
       "FavoriteDance": "Unknown",
       "Age": "18",
       "DriverLicense": "00000-000",
-      "FirstName": "AC",
+      "FirstName": "ACCC",
       "LastName": "Undefined",
       "ArivalCity": "Undefined",
       "PassportSer": "00000000",
       "PassportNo": "00000000",
       "GroupCollection": "Acrobats"
+    },
+    {
+      "AcrobatTechnique": "Flip",
+      "FavoriteDance": "Unknown",
+      "Age": "18",
+      "DriverLicense": "00000-000",
+      "FirstName": "ACCCC",
+      "LastName": "Undefined",
+      "ArivalCity": "Undefined",
+      "PassportSer": "00000000",
+      "PassportNo": "00000000",
+      "GroupCollection": "Acrobats"
+    },
+    {
+      "AcrobatTechnique": "Flip",
+      "FavoriteDance": "Unknown",
+      "Age": "18",
+      "DriverLicense": "00000-000",
+      "FirstName": "ACCCCC",
+      "LastName": "Undefined",
+      "ArivalCity": "Undefined",
+      "PassportSer": "00000000",
+      "PassportNo": "00000000",
+      "GroupCollection": "Acrobats"
+    },
+    {
+      "AcrobatTechnique": "Flip",
+      "FavoriteDance": "Unknown",
+      "Age": "18",
+      "DriverLicense": "00000-000",
+      "FirstName": "ACCCCCC",
+      "LastName": "Undefined",
+      "ArivalCity": "Undefined",
+      "PassportSer": "00000000",
+      "PassportNo": "00000000",
+      "GroupCollection": "Acrobats"
+    },
+    {
+      "AcrobatTechnique": "Flip",
+      "FavoriteDance": "Unknown",
+      "Age": "18",
+      "DriverLicense": "00000-000",
+      "FirstName": "Undefined",
+      "LastName": "Undefined",
+      "ArivalCity": "Undefined",
+      "PassportSer": "00000000",
+      "PassportNo": "00000000",
+      "GroupCollection": "Default"
     }
   ]
 }

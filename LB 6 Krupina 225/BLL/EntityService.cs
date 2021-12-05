@@ -10,60 +10,167 @@ namespace BLL
 {
     public class EntityService
     {
-        public EntityContext entityContext = new EntityContext();
-        public List<Object> objList = new List<Object>();
-        List<Object> objFindList = new List<Object>();
+        EntityContext entityContext = new EntityContext();
+        List<Object> allObjList = new List<Object>();
+        List<Object> findObjList = new List<Object>();
+
+        List<String> objNames = new List<String>();
+        List<Object> categories = new List<Object>() { "Default" ,true};
+
+        List<String> groups = new List<string>();
+
+
         public int IndexOfChosenObj { get; set; } = 0;
         public int PropertyNum { get; set; } = 1;
-        
 
 
-        public List<String> groups = new List<string>();
 
         public EntityService(EntityContext entityContext)
         {
             this.entityContext = entityContext;
             entityContext.LoadConfig();
+            Deserialize();
+            SetObjsCategories();
         }
-        public EntityService(): this(new EntityContext()) {}
+        public EntityService() : this(new EntityContext()) { }
 
 
 
-        public List<String> GetObjNames()
-        { 
-            return EntityContext.GetObjNames(objList); 
+        ////////////////////////////////////////////////////////////////////////////////////
+    
+        public void RenameGroupOfCurrentObject(String newName)
+        {
+            if (IndexOfChosenObj >= findObjList.Count || IndexOfChosenObj < 0) return;
+            findObjList = entityContext.RenameGroupOfObject(newName, findObjList, IndexOfChosenObj);
+            SetObjsCategories();
+            SaveObjList();
         }
-/*        public String GetObjectHeading()
-        { return EntityContext.GetObjectHeading(objList[IndexOfChosenObj]); }*/
+
+
+        public void SetObjsCategories()
+        {
+           // categories.Clear();
+            foreach (var obj in allObjList) 
+                AddCategory(entityContext.GetObjCategory(obj));
+            DelSimilarCategories();
+        }
+
+        public List<Object> GetObjsCategories()
+        {
+            //SetObjsCategories();
+            for (int i = 0; i < categories.Count-2; i += 2)
+                if (categories[i].ToString() == categories[i + 2].ToString())
+                {
+                    categories.RemoveAt(i + 2);
+                    categories.RemoveAt(i + 2);
+                    i -= 2;
+                }
+            return categories; 
+        }
+
+        public void DelSimilarCategories()
+        {
+            for (int i = 0; i < categories.Count; i += 2)
+                for (int ii = 2 + i; ii < categories.Count; ii += 2)
+                {
+                    if (i >= 0 && categories[i].ToString() == categories[ii].ToString())
+                    {
+                        categories.RemoveAt(i);
+                        categories.RemoveAt(i);
+                        ii = i;
+                        i -=2;
+                    }
+                }
+        }
+
+        public void AddCategory(String name)
+        {
+            if (name == "") return;
+            categories.Add(name);
+            categories.Add(true);
+
+            DelSimilarCategories();
+        }
+
+        public void DeleteCategory(String name)
+        {
+            for (int i = 0; i < categories.Count; i++)
+                if (categories[i].ToString() == name)
+                {
+                    categories.RemoveAt(i);
+                    categories.RemoveAt(i);
+                    return;
+                }
+
+        }
+
+        public void ChangeShowCatigories(String name, bool isShow)
+        {
+            for (int i = 0; i < categories.Count; i++)
+                if (categories[i].ToString() == name)
+                {
+                    categories[i + 1] = isShow;
+                    return;
+                }
+        }
+
+        public List<Object> GetFindObjects(String find)
+        {
+            //entityContext.CheckCurrentSerializeFile();
+            CheckIndexOfChoosenObj();
+            findObjList = entityContext.FindObjects(find, allObjList);
+            return findObjList;
+        }
+
+
+        public Hashtable GetTableOfObjectAndGroup()
+        {
+            Hashtable h = new Hashtable();
+            List<String> groups = GetGroupsOfObj();
+
+            for (int i = 0; i < allObjList.Count; i++)
+                h.Add(allObjList[i], groups[i]);
+
+            return h;
+        }
+        public List<String> GetObjNames(List<Object> objList)
+        {
+            return EntityContext.GetObjNames(objList);
+        }
+
+
+        ////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
         public List<String> GetObjNameProps()
         {
             if (IndexOfChosenObj == -1)
                 IndexOfChosenObj = 0;
 
-            if (IndexOfChosenObj >= objList.Count)
+            if (IndexOfChosenObj >= findObjList.Count)
                 return new List<String> { "" };
 
-            return EntityContext.GetObjNameProps(objList[IndexOfChosenObj]);
+            return EntityContext.GetObjNameProps(findObjList[IndexOfChosenObj]);
         }
-/*        public String GetObjNameProp(int propNum)
+
+        public List<String> GetAllObjValueProp()
         {
-            if (propNum == -1)
-                return "";
-            return entityContext.GetObjNameProp(propNum, objList[IndexOfChosenObj]);
-        }*/
-        public List<String> GetObjValueProp()
-        {
-            if (IndexOfChosenObj >= objList.Count)
+            if (IndexOfChosenObj >= findObjList.Count)
                 return new List<String> { "" };
-            return entityContext.GetObjValueProp(objList[IndexOfChosenObj]);
+            return entityContext.GetObjValueProp(findObjList[IndexOfChosenObj]);
         }
-        public String GetObjValueProp(int propNum)//!
+
+        public String GetObjValueProp(int propNum)
         {
             if (propNum == -1 )
                 return "";
-            if (IndexOfChosenObj>=objList.Count)
+            if (IndexOfChosenObj>= findObjList.Count)
                 return "";
-            return entityContext.GetObjValueProp(propNum, objList[IndexOfChosenObj]);
+            return entityContext.GetObjValueProp(propNum, findObjList[IndexOfChosenObj]);
         }
 
 
@@ -71,10 +178,9 @@ namespace BLL
 
         public List<String> GetMethodsInfo()
         {
-            if(IndexOfChosenObj >= objList.Count)
-                return new List<String> { "" };
+            if(IndexOfChosenObj >= findObjList.Count) return new List<String> { "" };
 
-            return EntityContext.GetMethodsInfo(objList[IndexOfChosenObj]);
+            return EntityContext.GetMethodsInfo(findObjList[IndexOfChosenObj]);
         }
         public static List<Type> GetAssemblyTypes()
         { return EntityContext.GetAssemblyTypes(); }
@@ -88,46 +194,44 @@ namespace BLL
 
 
 
-        public void Deserialize()
-        {
-            entityContext.CheckCurrentSerializeFile();
-                
-            objList = entityContext.Deserialize();
+        public void Deserialize() //!
+        {  
+            allObjList = entityContext.Deserialize();
         }
 
         public void SaveObjList()
-        { 
-            entityContext.SavePacketIntoDatabase(); 
-        }
+        {  entityContext.SavePacketIntoDatabase(allObjList);   }
         public void DeleteObj()
         {
-            entityContext.CheckCurrentSerializeFile();
+            //entityContext.CheckCurrentSerializeFile();
 
-            entityContext.objList.Remove(objList[IndexOfChosenObj]);
-            objList.Remove(objList[IndexOfChosenObj]);
+            //entityContext.objList.Remove(objList[IndexOfChosenObj]);
+            //allObjList.Remove(allObjList[IndexOfChosenObj]);
+            allObjList.Remove(findObjList[IndexOfChosenObj]);
+            findObjList.Remove(findObjList[IndexOfChosenObj]);
 
             SaveObjList();
             CheckIndexOfChoosenObj();
         }
-        public void AppendObjectInDatabase(int keyInfo)
+        public void AppendObjectInDatabase(int objNumber)
         {
-            entityContext.CheckCurrentSerializeFile();
+            //entityContext.CheckCurrentSerializeFile();
 
-            Deserialize();
-            if (keyInfo <= GetAssemblyTypes().Count)
+            //Deserialize();
+            if (objNumber <= GetAssemblyTypes().Count)
             {
-                List<Type> list = GetAssemblyTypes();
-                objList.Add(EntityContext.CreateObject(list[keyInfo]));
-                IndexOfChosenObj = objList.Count - 1;
+                allObjList.Add(EntityContext.CreateObject(GetAssemblyTypes()[objNumber]));
+                IndexOfChosenObj = allObjList.Count - 1;
                 SaveObjList();
             }
         }
-       // public void CreateNewFile() { entityContext.CreateFile(); }
+
 
 
         public bool InputInfoAndSaveObj(String inputData)
         {
-            if (PropertyNum >=0 && IndexOfChosenObj < objList.Count && EntityContext.CheckInputInfo(inputData, PropertyNum, objList[IndexOfChosenObj]))
+            if (PropertyNum >=0 && IndexOfChosenObj < findObjList.Count && 
+                EntityContext.CheckInputInfo(inputData, PropertyNum, findObjList[IndexOfChosenObj]))
             {
                 SaveObjList();
                 return true;
@@ -136,8 +240,8 @@ namespace BLL
         }
         public void WorckWithMethods(int inputKey, bool isWorckableObj)
         {
-            MethodInfo[] objInfo = this.objList[IndexOfChosenObj].GetType().GetMethods();
-            var infos = this.objList[IndexOfChosenObj].GetType().GetInterfaces();
+            MethodInfo[] objInfo = this.allObjList[IndexOfChosenObj].GetType().GetMethods();
+            var infos = this.allObjList[IndexOfChosenObj].GetType().GetInterfaces();
             objInfo = (from x in objInfo where x.ToString().Contains("_Object_") select x).ToArray();
 
             for (int i = 0; i < objInfo.Length; i++)
@@ -176,80 +280,44 @@ namespace BLL
         }*/
         private void InvokeSimpleMethod(int inputKey, MethodInfo[] objInfo)
         {
-            Object result = objList[IndexOfChosenObj];
-            objList[IndexOfChosenObj].GetType().GetMethod(objInfo[inputKey].Name).Invoke(result, Array.Empty<object>());
+            Object result = allObjList[IndexOfChosenObj];
+            allObjList[IndexOfChosenObj].GetType().GetMethod(objInfo[inputKey].Name).Invoke(result, Array.Empty<object>());
         }
 
 
-        public List<Object> FindObjects(String find)
-        {
-            entityContext.CheckCurrentSerializeFile();
-
-            objList = entityContext.FindObjects(find);
-            CheckIndexOfChoosenObj();
-            return objList;
-        }
-
+        
 
 
 
 
         public void CheckIndexOfChoosenObj()
         {
-            if (IndexOfChosenObj > objList.Count-1)
-                IndexOfChosenObj = objList.Count-1;
+            if (IndexOfChosenObj > findObjList.Count-1)
+                IndexOfChosenObj = findObjList.Count-1;
             if (IndexOfChosenObj < 0)
                 IndexOfChosenObj = 0;
-            if (objList.Count == 0)
+            if (findObjList.Count == 0)
                 IndexOfChosenObj = 0;
         }
-/*        public int CheckIndexOfChoosenObjs(int number)
-        {
-            int maxNumber = GetAssemblyTypes().Count - 1;
-
-            if (number > maxNumber)
-                return maxNumber;
-            if (number < 0)
-                return 0;
-            if (maxNumber == -1)
-                IndexOfChosenObj = 0;
-
-            return number;
-        }*/
 
 
 
 
 
-
-
-        public Hashtable GetTableOfObjectAndGroup()
-        {
-            Hashtable h = new Hashtable();
-            List<String> groups = GetGroupsOfObj();
-
-            for (int i = 0; i < objList.Count; i++)
-                    h.Add(objList[i], groups[i]);
-
-
-            return h;
-        }
+       
 
         public List<String> GetGroupsOfObj()
         {
-            return entityContext.GetGroupsOfObj(objList);
+            return entityContext.GetGroupsOfObj(allObjList);
         }
 
         public void SetGroupToCurrentObject_andSave(String group)
         {
-            entityContext.SetGroupToCurrentObject(group, objList[IndexOfChosenObj]);
+            entityContext.SetGroupToCurrentObject(group, findObjList[IndexOfChosenObj]);
             SaveObjList();
         }
 
-        public void RenameGroupOfCurrentObject(String newName) 
-        {
-            entityContext.RenameGroupOfObject(newName,objList,IndexOfChosenObj);
-        }
+        
 
 
 
@@ -257,7 +325,7 @@ namespace BLL
 
         public String CountPercentOfFirstCourseArrivalsStudent()
         {
-            List<Object> listObj = entityContext.CreateListOfArrivalStudents_and_notArrivalStudents(objList);
+            List<Object> listObj = entityContext.CreateListOfArrivalStudents_and_notArrivalStudents(findObjList);
             bool isCountFromKyiv = true;
             float total = listObj.Count-1;
             float matchStudent = 0;
@@ -287,7 +355,7 @@ namespace BLL
         {
             //             - собирает в список студентов, те у которых нет записи, записуються по 4 человека в комнату,
             //              в одно общежитие, комнат не больше 20 на этаж, не больше 4 этажей.
-            List<Object> listObj = entityContext.CreateListOfArrivalStudentsAndUnsettle(objList);
+            List<Object> listObj = entityContext.CreateListOfArrivalStudentsAndUnsettle(findObjList);
 
             string room = "1";
             int floor = 10;

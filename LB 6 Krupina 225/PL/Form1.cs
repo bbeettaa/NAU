@@ -19,7 +19,9 @@ namespace PL
 
     public partial class Form1 : Form
     {
-        EntityService service = new EntityService();
+        private EntityService service = new EntityService();
+        private List<Object> categories;
+
         private string find = "";
         private int selectedProperty = 0;
         private int textBox2_caretka = 0;
@@ -32,100 +34,142 @@ namespace PL
             AddObjectStripMenuItem.ShowDropDown();
             AddObjectStripMenuItem.HideDropDown();
 
-            foreach (var obj in EntityService.GetAssemblyTypes())//!1
+            foreach (var obj in EntityService.GetAssemblyTypes())
                 toolStripComboBox3.Items.Add(obj.Name.ToString());
-
 
             InitializeListView();
         }
-
-
-        private void InitializeListView()//rename me please 
+        
+        private void InitializeListView()
         {
-            foreach(var obj in listView1.Groups)
-            service.groups.Add(obj.ToString());
+            //foreach(var obj in listView.Groups)
+            //service.groups.Add(obj.ToString());
 
-            listView1.Items.Clear();
-            listView1.Groups.Clear();
+            //listView.Items.Clear();
+            //listView.Groups.Clear();
 
-            service.FindObjects(find);
-
-            List<String> names = service.GetObjNames();
+            //service.FindObjects(find);
             int  groupNumber = 0;
 
-            foreach (var obj in service.GetGroupsOfObj())
-                service.groups.Add(obj);
+/*            foreach (var obj in service.GetGroupsOfObj())
+                service.groups.Add(obj);*/
 
             Hashtable groupsAndNames = service.GetTableOfObjectAndGroup();
 
-            List<String> groups = service.groups;
-            service.groups = service.groups.GroupBy(x => x).Where(g => g.Count() > 0 && g != null).Select(g => g.Key).ToList();
-            groups = service.groups.GroupBy(x => x).Where(g => g.Count() > 0).Select(g => g.Key).ToList();
-            groups.ForEach(x => listView1.Groups.Add(x, x));
+            List<Object> objList = service.GetFindObjects(find);
+            List<String> names = service.GetObjNames(objList);
 
-            CheckGroupButtonsInit(ref groups);
-            TransferToGroupButtonInit(ref groups);
+            categories = service.GetObjsCategories();
+            //service.groups = service.groups.GroupBy(x => x).Where(g => g.Count() > 0 && g != null).Select(g => g.Key).ToList();
+            //groups = service.groups.GroupBy(x => x).Where(g => g.Count() > 0).Select(g => g.Key).ToList();
+            //groups.ForEach(x => listView.Groups.Add(x, x));
+
+            /*for (int i =0;i <categories.Count;i+=2)
+                listView.Groups.Add(categories[i].ToString(), categories[i].ToString());*/
+
+
+
+            initGroupListView(categories);
+            CheckGroupButtonsInit(ref categories);
+            TransferToGroupButtonInit(ref categories);
+
+            //clearListView();
 
             int indexOfGroup = 0;
             for (int i = 0; i < names.Count; i++)
             {
-                 groupNumber = groups.IndexOf(groupsAndNames[service.objList[i]].ToString());
+                groupNumber = categories.IndexOf(groupsAndNames[objList[i]].ToString());
 
-                if ( groupNumber == -1 && isShowAllItemsAndIgrnoreGroups== false)
+                if (groupNumber == -1 && isShowAllItemsAndIgrnoreGroups == false)
                 {
-                    if(i< service.objList.Count)
-                    service.objList.RemoveAt(i);
                     names.RemoveAt(i);
-                    i -=1;
+                    i -= 1;
                     continue;
                 }
-                if (i< names.Count)
+                if (i < names.Count)
                 {
-                    listView1.Items.Add($"{names[i]}");
+                    if ((bool)categories[groupNumber + 1] == false)
+                    {
+                        //names.RemoveAt(i);
+                        //i--;
+                       // continue;
+
+                    }
+
+                    if (i >= listView.Items.Count)
+                        listView.Items.Add($"{names[i]}");
+                    else
+                        listView.Items[i].Text = $"{names[i]}";
 
                     if (isShowAllItemsAndIgrnoreGroups)
-                        listView1.Items[indexOfGroup++].Group = null;
+                        listView.Items[indexOfGroup++].Group = null;
                     else
-                        listView1.Items[indexOfGroup++].Group = listView1.Groups[groupNumber];
+                        listView.Items[indexOfGroup++].Group = listView.Groups[groupNumber / 2];                    
                 }
             }
+
+            for (int i = names.Count; i < listView.Items.Count; i++)
+            {
+                listView.Items.RemoveAt(i);
+                i--;
+            }
+            //listView.Items[service.IndexOfChosenObj].Selected = true;
+            //listView.Items[service.IndexOfChosenObj].Checked = true;
         }
 
 
-        private void CheckGroupButtonsInit(ref List<String> groups)
+
+        public void initGroupListView(List<Object> categories) {
+            for (int i = 0; i < categories.Count; i += 2)
+                if ((bool)categories[i + 1] == true)
+                {
+                    if (i / 2 >= listView.Groups.Count)
+                        listView.Groups.Add(categories[i].ToString(), categories[i].ToString());
+                    else
+                        listView.Groups[i / 2].Header = categories[i].ToString();
+
+                }
+                else
+                {
+                    listView.Groups[i/2] = null;
+                }
+        }
+
+
+        private void CheckGroupButtonsInit(ref List<Object> categories)
         {
-            InitializeToolStrips(ref groups, WorckWithGroups_ToolStripMenuItem, true, new EventHandler(this.CheckGroup_Click));
+            InitializeToolStrips(ref categories, WorckWithGroups_ToolStripMenuItem, true, new EventHandler(this.CheckGroup_Click));
             
             try
             {
                 for (int i = 1; i < WorckWithGroups_ToolStripMenuItem.DropDownItems.Count; i++)
                 {
-                    if (!(WorckWithGroups_ToolStripMenuItem.DropDownItems[i] as ToolStripMenuItem).Checked)
-                       groups[i-1] = null;
+                    //if (!(WorckWithGroups_ToolStripMenuItem.DropDownItems[i] as ToolStripMenuItem).Checked)
+                  //     groups[i-1] = null;
                 }
             }
             catch (Exception e) { }
         }
 
         
-        private void TransferToGroupButtonInit(ref List<String> groups)
+        private void TransferToGroupButtonInit(ref List<Object> categories)
         {
-            InitializeToolStrips(ref groups, TfansferToGroupToolStripMenuItem,false,new EventHandler(this.TransferToGroup_Click));
+            InitializeToolStrips(ref categories, TfansferToGroupToolStripMenuItem,false,new EventHandler(this.TransferToGroup_Click));
         }
 
-        private void InitializeToolStrips(ref List<String> groups, ToolStripMenuItem menuItem, bool isChecked, EventHandler eventHandler)
+        private void InitializeToolStrips(ref List<Object> categories, ToolStripMenuItem menuItem, bool isChecked, EventHandler eventHandler)
         {
             bool isExistedToolStrop = false;
 
-            foreach (var group in groups)
+            for (int i =0;i< categories.Count;i+=2)
             {
                 foreach (var toolStrip in menuItem.DropDownItems)
-                    if (toolStrip.ToString() == group)
+                    if (toolStrip.ToString() == categories[i].ToString())
                         isExistedToolStrop = true;
 
-                if (!isExistedToolStrop && group != null)
+                if (!isExistedToolStrop)
                 {
-                    menuItem.DropDownItems.Add(group, null, eventHandler);
+                    menuItem.DropDownItems.Add(categories[i].ToString(), null, eventHandler);
                     (menuItem.DropDownItems[menuItem.DropDownItems.Count - 1] as ToolStripMenuItem).Checked = isChecked;
                 }
                 isExistedToolStrop = false;
@@ -139,7 +183,7 @@ namespace PL
 
 
             List<String> objNameProp = service.GetObjNameProps();
-            List<String> objValueProp = service.GetObjValueProp();
+            List<String> objValueProp = service.GetAllObjValueProp();
 
             label1.Text = $"Тип об'єкту       {objNameProp[0]}";
             objNameProp.RemoveAt(0);
@@ -158,28 +202,7 @@ namespace PL
                 comboBox1.Items.Add(str);
         }
 
-        private void ListBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            selectedProperty = listBox2.SelectedIndex;
-            service.PropertyNum = selectedProperty;
-            textBox2.Text = service.GetObjValueProp(selectedProperty);
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-       {
-            service.PropertyNum = selectedProperty;
-            if (textBox2.SelectionStart!=0)
-            textBox2_caretka = textBox2.SelectionStart + textBox2.SelectionLength;
-
-            if (!service.InputInfoAndSaveObj(textBox2.Text))
-                textBox2.Text = service.GetObjValueProp(selectedProperty);
-            
-            initializeFieldOfProperty();
-            textBox2.SelectionStart = textBox2_caretka;
-
-            InitializeListView();
-        }
-
+       
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             service.WorckWithMethods(comboBox1.SelectedIndex, true);
@@ -201,15 +224,13 @@ namespace PL
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listView1.SelectedIndices.Count > 0)
-                service.IndexOfChosenObj= listView1.SelectedIndices[0];          
-
-            initializeFieldOfProperty();
+           
         }
 
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        private void dellObject_toolStripMenuItem2_Click(object sender, EventArgs e)
         {
             service.DeleteObj();
+            listView.Items[service.IndexOfChosenObj].Remove();
             InitializeListView();
         }
 
@@ -217,26 +238,37 @@ namespace PL
         {
             InitializeListView();
 
-            ListViewGroupCollection groups = listView1.Groups;
+            ListViewGroupCollection groups = listView.Groups;
         }
 
         private void CreateGroup_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             String name = toolStripTextBox1.Text;
-            listView1.Groups.Add(name, name);
-            listView1.Items.Add("");
-            listView1.Items[listView1.Items.Count-1].Group = listView1.Groups[listView1.Groups.Count - 1];
+            if (name == null || name == "") return;
+
+            service.AddCategory(name);
+
             InitializeListView();
         }
 
         private void CheckGroup_Click(object sender, EventArgs e)
         {
             if ((sender as ToolStripMenuItem).Checked)
+            {
                 (sender as ToolStripMenuItem).Checked = false;
+                int index = categories.IndexOf((sender as ToolStripMenuItem).Text);
+                categories[index + 1] = false;
+            }
             else
+            {
                 (sender as ToolStripMenuItem).Checked = true;
+                int index = categories.IndexOf((sender as ToolStripMenuItem).Text);
+                categories[index + 1] = true;
+            }
 
             isShowAllItemsAndIgrnoreGroups = false;
+
+
 
             InitializeListView();
         }
@@ -252,8 +284,9 @@ namespace PL
         }
         private void TransferToGroup_Click(object sender, EventArgs e)
         {
-            int indexGroup = service.groups.IndexOf((sender as ToolStripMenuItem).Text);
-            service.SetGroupToCurrentObject_andSave(service.groups[indexGroup]);
+            List<Object> categories = service.GetObjsCategories();
+            int indexGroup = categories.IndexOf((sender as ToolStripMenuItem).Text);
+            service.SetGroupToCurrentObject_andSave(categories[indexGroup].ToString());
             InitializeListView();
         }
 
@@ -289,6 +322,36 @@ namespace PL
             InitializeListView();
         }
 
+        private void listView_Click(object sender, EventArgs e)
+        {
+            if (listView.SelectedIndices.Count > 0)
+                service.IndexOfChosenObj = listView.SelectedIndices[0];
 
+            initializeFieldOfProperty();
+        }
+
+        private void listBox2_Click(object sender, EventArgs e)
+        {
+            selectedProperty = listBox2.SelectedIndex;
+            service.PropertyNum = selectedProperty;
+            textBox2.Text = service.GetObjValueProp(selectedProperty);
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            service.PropertyNum = selectedProperty;
+            if (textBox2.SelectionStart != 0)
+                textBox2_caretka = textBox2.SelectionStart + textBox2.SelectionLength;
+
+            if (!service.InputInfoAndSaveObj(textBox2.Text))
+                textBox2.Text = service.GetObjValueProp(selectedProperty);
+
+            initializeFieldOfProperty();
+            textBox2.SelectionStart = textBox2_caretka;
+
+            InitializeListView();
+
+        }
     }
 }
