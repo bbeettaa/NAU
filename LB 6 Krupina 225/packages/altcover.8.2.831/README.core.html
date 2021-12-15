@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html []>
+<html lang="en">
+  <head>
+    <title>AltCover README</title>
+    <style>
+body, html {
+color: #000; background-color: #eee;
+font-family: 'Segoe UI', 'Open Sans', Calibri, verdana, helvetica, arial, sans-serif;
+position: absolute; top: 0px; width: 50em;margin: 1em; padding:0;
+}
+a {color: #444; text-decoration: none; font-weight: bold;}
+a:hover {color: #ecc;}
+</style>
+  </head>
+  <body>
+    <h1>altcover</h1>
+    <p>Instrumenting coverage tool for .net (framework 2.0+  and core) and Mono assemblies, reimplemented and extended almost beyond recognition from <a href="https://github.com/SteveGilham/dot-net-coverage">dot-net-coverage</a>, plus a set of related utilities for processing the results from this and from other programs producing similar output formats.</p>
+    <h2>Usage</h2>
+    <p>See the <a href="https://github.com/SteveGilham/altcover/wiki/Usage">Wiki page</a> for full details</p>
+    <h4>I really want coverage for my .net core unit test project right now</h4>
+    <p>Install into your test project</p>
+    <pre>
+      <code>dotnet add package AltCover
+</code>
+    </pre>
+    <p>and run</p>
+    <pre>
+      <code>dotnet test /p:AltCover=true
+</code>
+    </pre>
+    <p>The OpenCover format output will be in file <code>coverage.xml</code> in the project directory</p>
+    <h2>What's in the box?</h2>
+    <p>For Mono, .net framework and .net core, except as noted</p>
+    <ul>
+      <li>
+        <code>AltCover</code>, a command-line tool for recording code coverage (net472 and .netcoreapp2.0)</li>
+      <li>MSBuild tasks to drive the tool, including <code>dotnet test</code> integration</li>
+      <li>A PowerShell module for Windows PowerShell 5.1 and PowerShell Core 6+ containing a cmdlet that drives the tool, and other cmdlets for manipulating coverage reports</li>
+      <li>A coverage visualizer tool (net472) -- for .net framework, needs <a href="https://www.mono-project.com/download/stable/#download-win">GTK# v2.12.xx installed separately</a><img src="https://raw.githubusercontent.com/SteveGilham/altcover/master/AltCover.Visualizer/Screenshot-GTK.png" alt="Visualizer screenshot" /></li>
+    </ul>
+    <h2>Why altcover?</h2>
+    <p>As the name suggests, it's an alternative coverage approach.  Rather than working by hooking the .net profiling API at run-time, it works by weaving the same sort of extra IL into the assemblies of interest ahead of execution.  This means that it should work pretty much everywhere, whatever your platform, so long as the executing process has write access to the results file.  You can even mix-and-match between platforms used to instrument and those under test.</p>
+    <p>In particular, while instrumenting .net core assemblies "just works" with this approach, it also supports Mono, as long as suitable <code>.mdb</code> (or <code>.pdb</code>, in recent versions) symbols are available.  One major limitation here is that the <code>.mdb</code> format only stores the start location in the source of any code sequence point, and not the end; consequently any nicely coloured reports that take that information into account may show a bit strangely.</p>
+    <h3>Why altcover? -- the back-story of why it was ever a thing</h3>
+    <p>Back in 2010, the new .net version finally removed the deprecated profiling APIs that the free NCover 1.5.x series relied upon.  The first version of AltCover was written to both fill a gap in functionality, and to give me an excuse for a ground-up F# project to work on.  As such, it saw real production use for about a year and a half, until <a href="https://github.com/OpenCover/opencover">OpenCover</a> reached a point where it could be used for .net4/x64 work (and I could find time to adapt everything downstream that consumed NCover format input).</p>
+    <p>Fast forwards to autumn 2017, and I get the chance to dust the project off, with the intention of saying that it worked on Mono, too -- and realise that it's <em>déja vu</em> all over again, because .net core didn't yet have profiler based coverage tools either, and the same approach would work there as well.</p>
+    <h2>Other NuGet Packages in this suite</h2>
+    <ul>
+      <li>
+        <a href="https://www.nuget.org/packages/AltCover.api">
+          <img src="https://buildstats.info/nuget/altcover.api" alt="Nuget" /> API install</a> -- excludes the visualizer in all forms</li>
+      <li>
+        <a href="https://www.nuget.org/packages/AltCover.global">
+          <img src="https://buildstats.info/nuget/altcover.global" alt="Nuget" /> dotnet global tool install</a> -- excludes the visualizer in all forms</li>
+      <li>
+        <a href="https://www.nuget.org/packages/AltCover.visualizer">
+          <img src="https://buildstats.info/nuget/altcover.visualizer" alt="Nuget" /> Visualizer dotnet global tool</a> -- just the .net core/Avalonia Visualizer as a global tool</li>
+      <li>
+        <a href="https://www.nuget.org/packages/AltCover.Fake">
+          <img src="https://buildstats.info/nuget/altcover.fake" alt="Nuget" /> FAKE build task utilities</a> -- just AltCover related helper types for FAKE scripts (v5.18.1 or later), only in this package</li>
+    </ul>
+    <footer>
+      <p style="text-align: center">Copyright © 2010-2021 by Steve Gilham &lt;SteveGilham@users.noreply.github.com&gt;</p>
+    </footer>
+  </body>
+</html>

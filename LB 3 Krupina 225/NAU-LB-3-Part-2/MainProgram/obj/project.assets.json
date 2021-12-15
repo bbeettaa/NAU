@@ -69,11 +69,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bedu_s_bashkoy\\source\\repos\\LB 3 Krupina 225\\NAU-LB-3-Part-2\\MainProgram\\Main.csproj",
+      "projectUniqueName": "C:\\Users\\bedu_s_bashkoy\\source\\repos\\LB 3 Krupina 225\\MainProgram\\Main.csproj",
       "projectName": "Main",
-      "projectPath": "C:\\Users\\bedu_s_bashkoy\\source\\repos\\LB 3 Krupina 225\\NAU-LB-3-Part-2\\MainProgram\\Main.csproj",
+      "projectPath": "C:\\Users\\bedu_s_bashkoy\\source\\repos\\LB 3 Krupina 225\\MainProgram\\Main.csproj",
       "packagesPath": "C:\\Users\\bedu_s_bashkoy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bedu_s_bashkoy\\source\\repos\\LB 3 Krupina 225\\NAU-LB-3-Part-2\\MainProgram\\obj\\",
+      "outputPath": "C:\\Users\\bedu_s_bashkoy\\source\\repos\\LB 3 Krupina 225\\MainProgram\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -94,8 +94,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\bedu_s_bashkoy\\source\\repos\\LB 3 Krupina 225\\NAU-LB-3-Part-2\\PL\\PL.csproj": {
-              "projectPath": "C:\\Users\\bedu_s_bashkoy\\source\\repos\\LB 3 Krupina 225\\NAU-LB-3-Part-2\\PL\\PL.csproj"
+            "C:\\Users\\bedu_s_bashkoy\\source\\repos\\LB 3 Krupina 225\\PL\\PL.csproj": {
+              "projectPath": "C:\\Users\\bedu_s_bashkoy\\source\\repos\\LB 3 Krupina 225\\PL\\PL.csproj"
             }
           }
         }
@@ -124,7 +124,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

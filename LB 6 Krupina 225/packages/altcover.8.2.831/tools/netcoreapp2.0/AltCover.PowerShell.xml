@@ -1,0 +1,1612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>AltCover.PowerShell</name></assembly>
+<members>
+<member name="M:AltCover.Commands.GetAcceleratorCommand.EndProcessing">
+ <summary>
+ <para type="description">List current accelerator to type mappings</para>
+ </summary>
+</member>
+<member name="T:AltCover.Commands.GetAcceleratorCommand">
+ <summary>
+ <para type="synopsis">List all type abbreviations, like the built-in `[xml]` for `System.Xml.XmlDocument`.</para>
+ <para type="description">Reports all currently available type abbreviations, both system- and user- defined.</para>
+ <example>
+   <code>$a = Get-Accelerator</code>
+ </example>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.AddAcceleratorCommand.XDocument@">
+ <summary>
+ <para type="description">Add [xdoc] for the `System.Xml.Linq.XDocument` type</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.AddAcceleratorCommand.Accelerator@">
+ <summary>
+ <para type="description">Add [accelerators] for the accelerator type</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.AddAcceleratorCommand.Mapping@">
+ <summary>
+ <para type="description">Mapping of name to type</para>
+ <para type="description">`[Key.ToString()]` is the accelerator for `Value.GetType()` (or just `Value` if that is a `System.Type` already.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.AddAcceleratorCommand.XDocument(System.Management.Automation.SwitchParameter)">
+ <summary>
+ <para type="description">Add [xdoc] for the `System.Xml.Linq.XDocument` type</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.AddAcceleratorCommand.Mapping(System.Collections.Hashtable)">
+ <summary>
+ <para type="description">Mapping of name to type</para>
+ <para type="description">`[Key.ToString()]` is the accelerator for `Value.GetType()` (or just `Value` if that is a `System.Type` already.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.AddAcceleratorCommand.Accelerator(System.Management.Automation.SwitchParameter)">
+ <summary>
+ <para type="description">Add [accelerators] for the accelerator type</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.AddAcceleratorCommand.XDocument">
+ <summary>
+ <para type="description">Add [xdoc] for the `System.Xml.Linq.XDocument` type</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.AddAcceleratorCommand.Mapping">
+ <summary>
+ <para type="description">Mapping of name to type</para>
+ <para type="description">`[Key.ToString()]` is the accelerator for `Value.GetType()` (or just `Value` if that is a `System.Type` already.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.AddAcceleratorCommand.Accelerator">
+ <summary>
+ <para type="description">Add [accelerators] for the accelerator type</para>
+ </summary>
+</member>
+<member name="M:AltCover.Commands.AddAcceleratorCommand.ProcessRecord">
+ <summary>
+ <para type="description">Accumulate new accelerator to type mappings</para>
+ </summary>
+</member>
+<member name="M:AltCover.Commands.AddAcceleratorCommand.EndProcessing">
+ <summary>
+ <para type="description">Apply the new accelerator to type mappings</para>
+ </summary>
+</member>
+<member name="M:AltCover.Commands.AddAcceleratorCommand.BeginProcessing">
+ <summary>
+ <para type="description">Initialise the map of accelerator to type</para>
+ </summary>
+</member>
+<member name="T:AltCover.Commands.AddAcceleratorCommand">
+ <summary>
+ <para type="synopsis">Add one or more type abbreviations, like the built-in `[xml]` for `System.Xml.XmlDocument`.</para>
+ <para type="description">Extends the built-in set of type abbreviations with user declared ones.  Two common abbreviations are supplied as switch parameters, and then others can be added free-form.</para>
+ <example>
+   <code>Add-Accelerator -XDocument</code>
+   <para>Add `[xdoc]` the easy way</para>
+ </example>
+ <example>
+   <code>Add-Accelerator -Mapping @{ "xdoc" = [type]::gettype("System.Xml.Linq.XDocument")</code>
+   <para>Add `[xdoc]` by the long way round</para>
+ </example>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.MergeOpenCoverCommand.OutputFile@">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.MergeOpenCoverCommand.InputFile@">
+ <summary>
+ <para type="description">Input as file paths</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.MergeOpenCoverCommand.XDocument@">
+ <summary>
+ <para type="description">Input as XML</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.MergeOpenCoverCommand.XDocument(System.Xml.Linq.XDocument[])">
+ <summary>
+ <para type="description">Input as XML</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.MergeOpenCoverCommand.OutputFile(System.String)">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.MergeOpenCoverCommand.InputFile(System.String[])">
+ <summary>
+ <para type="description">Input as file paths</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.MergeOpenCoverCommand.XDocument">
+ <summary>
+ <para type="description">Input as XML</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.MergeOpenCoverCommand.OutputFile">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.MergeOpenCoverCommand.InputFile">
+ <summary>
+ <para type="description">Input as file paths</para>
+ </summary>
+</member>
+<member name="T:AltCover.Commands.MergeOpenCoverCommand">
+ <summary>
+ <para type="synopsis">Merges OpenCover reports.</para>
+ <para type="description">Takes a set of OpenCover reports and crates a composite.  It handles
+ both strict (`OpenCover`, `AltCover --reportFormat=OpenCover`) and more relaxed (`coverlet`,
+ `ConvertFrom-CoverageJson`, `Write-OpenCoverDerivedState -Coverlet`) interpretations of the
+ format, which may lead to a not-quite strict result.  Note -- Module records are merged only
+ if their hash values match, so output from different builds and possibly different source will
+ be kept distinct.</para>
+ <example>
+   <code>    $xml = $docs | Merge-OpenCover -OutputFile "./_Packaging/Combined.xml"</code>
+ </example>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.CompressBranchingCommand.WithinSequencePoint@">
+ <summary>
+ <para type="description">Discard branches within a sequence point</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.CompressBranchingCommand.SameSpan@">
+ <summary>
+ <para type="description">Merge branches when start and end at the same place</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.CompressBranchingCommand.OutputFile@">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.CompressBranchingCommand.InputFile@">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.CompressBranchingCommand.XDocument@">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.CompressBranchingCommand.XDocument(System.Xml.Linq.XDocument)">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.CompressBranchingCommand.WithinSequencePoint(System.Management.Automation.SwitchParameter)">
+ <summary>
+ <para type="description">Discard branches within a sequence point</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.CompressBranchingCommand.SameSpan(System.Management.Automation.SwitchParameter)">
+ <summary>
+ <para type="description">Merge branches when start and end at the same place</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.CompressBranchingCommand.OutputFile(System.String)">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.CompressBranchingCommand.InputFile(System.String)">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.CompressBranchingCommand.XDocument">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.CompressBranchingCommand.WithinSequencePoint">
+ <summary>
+ <para type="description">Discard branches within a sequence point</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.CompressBranchingCommand.SameSpan">
+ <summary>
+ <para type="description">Merge branches when start and end at the same place</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.CompressBranchingCommand.OutputFile">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.CompressBranchingCommand.InputFile">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="M:AltCover.Commands.CompressBranchingCommand.ProcessRecord">
+ <summary>
+ <para type="description">Create transformed document</para>
+ </summary>
+</member>
+<member name="T:AltCover.Commands.CompressBranchingCommand">
+ <summary>
+ <para type="synopsis">Removes compiler-generated hidden branches from OpenCover.</para>
+ <para type="description">Takes output from the OpenCover program, and adjust from OpenCover's liberal idea of significant branches towards AltCover's more restricted approach -- chose either or both of `-SameSpan` to unify branches that go from the same start, and take the same trajectory to the same end (OpenCover issue #786 being one instance of this) and `-WithinSequencePoint` to remove branches interior to a statement (compiler generated things like stashing of lambdas, the hidden conditional `Dispose()` after a `using`, or inside F# inlines -- OpenCover issues #657, #807 being instances of this).</para>
+ <para type="description">Either takes an `XDocument` from the pipeline or from a file; emits the result as an `XDocument` to the pipeline and optionally to a file.</para>
+ <example>
+   <code>    $xml = Compress-Branching -WithinSequencePoint -InputFile "./Tests/Compressible.xml" -OutputFile "./_Packaging/CompressInterior.xml"</code>
+ </example>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ConvertFromCoverageJsonCommand.OutputFile@">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ConvertFromCoverageJsonCommand.InputFile@">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ConvertFromCoverageJsonCommand.Json@">
+ <summary>
+ <para type="description">Input as `string` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertFromCoverageJsonCommand.OutputFile(System.String)">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertFromCoverageJsonCommand.Json(System.String)">
+ <summary>
+ <para type="description">Input as `string` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertFromCoverageJsonCommand.InputFile(System.String)">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertFromCoverageJsonCommand.OutputFile">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertFromCoverageJsonCommand.Json">
+ <summary>
+ <para type="description">Input as `string` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertFromCoverageJsonCommand.InputFile">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="M:AltCover.Commands.ConvertFromCoverageJsonCommand.ProcessRecord">
+ <summary>
+ <para type="description">Create transformed document</para>
+ </summary>
+</member>
+<member name="T:AltCover.Commands.ConvertFromCoverageJsonCommand">
+ <summary>
+ <para type="synopsis">Creates an OpenCover-style XML document from coverlet or AltCover JSON.</para>
+ <para type="description">Takes either coverlet or AltCover JSON input as file path, or a string as an argument or from the object pipeline.</para>
+ <para type="description">Writes the XML report to the object pipeline as an `XDocument`, and optionally to a file.</para>
+ <example>
+   <code>ConvertFrom-CoverageJson -InputFile "./Tests/Sample4.coverlet.json" -OutputFile "./_Packaging/Sample4.coverlet.json"</code>
+ </example>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.WriteOpenCoverDerivedStateCommand.OutputFile@">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.WriteOpenCoverDerivedStateCommand.Assembly@">
+ <summary>
+ <para type="description">Assemblies to use for generating the output</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.WriteOpenCoverDerivedStateCommand.BranchOrdinal@">
+ <summary>
+ <para type="description">The data source was generated by `coverlet`, so needs more work doing.</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.WriteOpenCoverDerivedStateCommand.Coverlet@">
+ <summary>
+ <para type="description">The data source was generated by `coverlet`, so needs more work doing.</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.WriteOpenCoverDerivedStateCommand.InputFile@">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.WriteOpenCoverDerivedStateCommand.XDocument@">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.WriteOpenCoverDerivedStateCommand.XDocument(System.Xml.Linq.XDocument)">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.WriteOpenCoverDerivedStateCommand.OutputFile(System.String)">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.WriteOpenCoverDerivedStateCommand.InputFile(System.String)">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.WriteOpenCoverDerivedStateCommand.Coverlet(System.Management.Automation.SwitchParameter)">
+ <summary>
+ <para type="description">The data source was generated by `coverlet`, so needs more work doing.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.WriteOpenCoverDerivedStateCommand.BranchOrdinal(AltCover.BranchOrdinal)">
+ <summary>
+ <para type="description">The data source was generated by `coverlet`, so needs more work doing.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.WriteOpenCoverDerivedStateCommand.Assembly(System.String[])">
+ <summary>
+ <para type="description">Assemblies to use for generating the output</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.WriteOpenCoverDerivedStateCommand.XDocument">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.WriteOpenCoverDerivedStateCommand.OutputFile">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.WriteOpenCoverDerivedStateCommand.InputFile">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.WriteOpenCoverDerivedStateCommand.Coverlet">
+ <summary>
+ <para type="description">The data source was generated by `coverlet`, so needs more work doing.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.WriteOpenCoverDerivedStateCommand.BranchOrdinal">
+ <summary>
+ <para type="description">The data source was generated by `coverlet`, so needs more work doing.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.WriteOpenCoverDerivedStateCommand.Assembly">
+ <summary>
+ <para type="description">Assemblies to use for generating the output</para>
+ </summary>
+</member>
+<member name="M:AltCover.Commands.WriteOpenCoverDerivedStateCommand.ProcessRecord">
+ <summary>
+ <para type="description">Create transformed document</para>
+ </summary>
+</member>
+<member name="T:AltCover.Commands.WriteOpenCoverDerivedStateCommand">
+ <summary>
+ <para type="synopsis">Fills other values based on recorded visit count numbers.</para>
+ <para type="description">Adds or updates summary data and other computed items in the OpenCover format report.</para>
+ <para type="description">In  `-Coverlet` mode, also fills in some of the gaps left by `coverlet`'s OpenCover dialect, particularly giving somewhat meaningful start and end column values for its line-based paradigm, as well as npath coverage and branch exits.</para>
+ <example>
+   <code>    $xml = Write-OpenCoverDerivedState -InputFile "./_Reports/OpenCoverForPester/OpenCoverForPester.coverlet.xml" -Coverlet -Assembly $Assemblies -OutputFile "./_Packaging/OpenCoverForPester.coverlet.xml"</code>
+ </example>
+ <example>
+   <code>    $xml = Write-OpenCoverDerivedState -InputFile "./_Reports/OpenCoverForPester/OpenCoverForPester.xml"</code>
+ </example>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ConvertFromNCoverCommand.OutputFile@">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ConvertFromNCoverCommand.Assembly@">
+ <summary>
+ <para type="description">Assemblies to use for generating the output</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ConvertFromNCoverCommand.InputFile@">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ConvertFromNCoverCommand.XDocument@">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertFromNCoverCommand.XDocument(System.Xml.Linq.XDocument)">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertFromNCoverCommand.OutputFile(System.String)">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertFromNCoverCommand.InputFile(System.String)">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertFromNCoverCommand.Assembly(System.String[])">
+ <summary>
+ <para type="description">Assemblies to use for generating the output</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertFromNCoverCommand.XDocument">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertFromNCoverCommand.OutputFile">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertFromNCoverCommand.InputFile">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertFromNCoverCommand.Assembly">
+ <summary>
+ <para type="description">Assemblies to use for generating the output</para>
+ </summary>
+</member>
+<member name="M:AltCover.Commands.ConvertFromNCoverCommand.ProcessRecord">
+ <summary>
+ <para type="description">Create transformed document</para>
+ </summary>
+</member>
+<member name="T:AltCover.Commands.ConvertFromNCoverCommand">
+ <summary>
+ <para type="synopsis">Converts classic NCover format and returns OpenCover format.</para>
+ <para type="description">The classic NCover format input may be either may be as an `XDocument` from the object pipeline or from a file.</para>
+ <para type="description">Writes the OpenCover format report to the pipeline as an `XDocument`, and, optionally, to a file.  The report will contain data for the assemblies listed as the `-Assembly` argument and that are in the NCover input.</para>
+ <example>
+   <code>    $xml = ConvertFrom-NCover -InputFile "./_Reports/ReleaseXUnitFSharpTypesDotNetRunner.xml" -Assembly $Assemblies -OutputFile "./_Packaging/AltCoverFSharpTypes.xml"</code>
+ </example>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ConvertToNCoverCommand.OutputFile@">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ConvertToNCoverCommand.InputFile@">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ConvertToNCoverCommand.XDocument@">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToNCoverCommand.XDocument(System.Xml.Linq.XDocument)">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToNCoverCommand.OutputFile(System.String)">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToNCoverCommand.InputFile(System.String)">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToNCoverCommand.XDocument">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToNCoverCommand.OutputFile">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToNCoverCommand.InputFile">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="M:AltCover.Commands.ConvertToNCoverCommand.ProcessRecord">
+ <summary>
+ <para type="description">Create transformed document</para>
+ </summary>
+</member>
+<member name="T:AltCover.Commands.ConvertToNCoverCommand">
+ <summary>
+ <para type="synopsis">Converts OpenCover format to NCover format.</para>
+ <para type="description">Takes the OpenCover input either as an ``XDocument`` from the object pipeline or from a file.</para>
+ <para type="description">Writes the classic NCover report to the pipeline as an ``XDocument``, and, optionally, to a file.</para>
+ <example>
+   <code>$xml = ConvertTo-NCover -InputFile "./Tests/HandRolledMonoCoverage.xml" -OutputFile "./_Packaging/HandRolledMonoNCover.xml"</code>
+ </example>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ConvertToCoberturaCommand.OutputFile@">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ConvertToCoberturaCommand.InputFile@">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ConvertToCoberturaCommand.XDocument@">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToCoberturaCommand.XDocument(System.Xml.Linq.XDocument)">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToCoberturaCommand.OutputFile(System.String)">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToCoberturaCommand.InputFile(System.String)">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToCoberturaCommand.XDocument">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToCoberturaCommand.OutputFile">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToCoberturaCommand.InputFile">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="M:AltCover.Commands.ConvertToCoberturaCommand.ProcessRecord">
+ <summary>
+ <para type="description">Create transformed document</para>
+ </summary>
+</member>
+<member name="T:AltCover.Commands.ConvertToCoberturaCommand">
+ <summary>
+ <para type="synopsis">Creates a Cobertura format report from other report formats.</para>
+ <para type="description">Takes either OpenCover or classic NCover format input as an `XDocument`, as an argument or from the object pipeline.</para>
+ <para type="description">Writes the Cobertura report to the object pipeline as an `XDocument`, and optionally to a file.</para>
+ <example>
+   <code>ConvertTo-Cobertura -InputFile "./Tests/HandRolledMonoCoverage.xml" -OutputFile "./_Packaging/OpenCover.lcov"</code>
+ </example>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ConvertToCoverageJsonCommand.InputFile@">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ConvertToCoverageJsonCommand.XDocument@">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToCoverageJsonCommand.XDocument(System.Xml.Linq.XDocument)">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToCoverageJsonCommand.InputFile(System.String)">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToCoverageJsonCommand.XDocument">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToCoverageJsonCommand.InputFile">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="M:AltCover.Commands.ConvertToCoverageJsonCommand.ProcessRecord">
+ <summary>
+ <para type="description">Create transformed document</para>
+ </summary>
+</member>
+<member name="T:AltCover.Commands.ConvertToCoverageJsonCommand">
+ <summary>
+ <para type="synopsis">Creates a JSON format report from other report formats.</para>
+ <para type="description">Takes either OpenCover or classic NCover format input as an `XDocument`, as an argument or from the object pipeline. Writes the JSON report to a string.</para>
+ <example>
+   <code>ConvertTo-CoverageJson -InputFile "./Tests/HandRolledMonoCoverage.xml"</code>
+ </example>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ConvertToLcovCommand.OutputFile@">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ConvertToLcovCommand.InputFile@">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ConvertToLcovCommand.XDocument@">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToLcovCommand.XDocument(System.Xml.Linq.XDocument)">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToLcovCommand.OutputFile(System.String)">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToLcovCommand.InputFile(System.String)">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToLcovCommand.XDocument">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToLcovCommand.OutputFile">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToLcovCommand.InputFile">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="M:AltCover.Commands.ConvertToLcovCommand.ProcessRecord">
+ <summary>
+ <para type="description">Create transformed document</para>
+ </summary>
+</member>
+<member name="T:AltCover.Commands.ConvertToLcovCommand">
+ <summary>
+ <para type="synopsis">Creates an Lcov format report from other report formats.</para>
+ <para type="description">Takes either OpenCover or classic NCover format input as an `XDocument`, as an argument or from the object pipeline. Writes the Lcov report to a file.</para>
+ <example>
+   <code>ConvertTo-Lcov -InputFile "./Tests/HandRolledMonoCoverage.xml" -OutputFile "./_Packaging/OpenCover.lcov"</code>
+ </example>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ConvertToXDocumentCommand.XmlDocument@">
+ <summary>
+ <para type="description">Input as `[xml]` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToXDocumentCommand.XmlDocument(System.Xml.XmlDocument)">
+ <summary>
+ <para type="description">Input as `[xml]` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToXDocumentCommand.XmlDocument">
+ <summary>
+ <para type="description">Input as `[xml]` value</para>
+ </summary>
+</member>
+<member name="M:AltCover.Commands.ConvertToXDocumentCommand.ProcessRecord">
+ <summary>
+ <para type="description">Create transformed document</para>
+ </summary>
+</member>
+<member name="T:AltCover.Commands.ConvertToXDocumentCommand">
+ <summary>
+ <para type="synopsis">Converts `[xml]` to `XDocument`.</para>
+ <para type="description">Takes an `[xml]` in and puts an `XDocument` to the object pipeline.</para>
+ <example>
+   <code>$xd = [xml]"&lt;Document /&gt;" | ConvertTo-XDocument</code>
+ </example>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ConvertToXmlDocumentCommand.XDocument@">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToXmlDocumentCommand.XDocument(System.Xml.Linq.XDocument)">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToXmlDocumentCommand.XDocument">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="M:AltCover.Commands.ConvertToXmlDocumentCommand.ProcessRecord">
+ <summary>
+ <para type="description">Create transformed document</para>
+ </summary>
+</member>
+<member name="T:AltCover.Commands.ConvertToXmlDocumentCommand">
+ <summary>
+ <para type="synopsis">Converts `XDocument` to `[xml]`.</para>
+ <para type="description">Takes an `XDocument` in and puts an `[xml]` to the object pipeline.</para>
+ <example>
+   <code>Add-Accelerator -XDocument; $xd = [xdoc]::Load("./Tests/Sample1WithNCover.xml");  $xml = $xd | ConvertTo-XmlDocument</code>
+   <para>Adds `[xdoc]` the easy way first, then does the conversion</para>
+ </example>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ConvertToBarChartCommand.OutputFile@">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ConvertToBarChartCommand.InputFile@">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ConvertToBarChartCommand.XDocument@">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToBarChartCommand.XDocument(System.Xml.Linq.XDocument)">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToBarChartCommand.OutputFile(System.String)">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToBarChartCommand.InputFile(System.String)">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToBarChartCommand.XDocument">
+ <summary>
+ <para type="description">Input as `XDocument` value</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToBarChartCommand.OutputFile">
+ <summary>
+ <para type="description">Output as file path</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.ConvertToBarChartCommand.InputFile">
+ <summary>
+ <para type="description">Input as file path</para>
+ </summary>
+</member>
+<member name="M:AltCover.Commands.ConvertToBarChartCommand.ProcessRecord">
+ <summary>
+ <para type="description">Create transformed document</para>
+ </summary>
+</member>
+<member name="T:AltCover.Commands.ConvertToBarChartCommand">
+ <summary>
+ <para type="synopsis">Generates a simple HTML report from coverage data.</para>
+ <para type="description">The report produced is based on the old NCover 1.5.8 XSLT, for both NCover and OpenCover coverage format data.  The input is as a file name or an `XDocument` from the pipeline, the output is to the pipeline as an `XDocument`, and, optionally, to a file. </para>
+ <example>
+   <code>    $xml = ConvertTo-BarChart -InputFile "./Tests/HandRolledMonoCoverage.xml" -OutputFile "./_Packaging/HandRolledMonoCoverage.html"</code>
+ </example>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.Verbosity@">
+ <summary>
+ <para type="description">Selects output level of the command</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.SummaryFormat@">
+ <summary>
+ <para type="description">Selects summary format</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.ShowStatic@">
+ <summary>
+ <para type="description">Instrument and show code that is by default skipped as trivial.</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.ShowGenerated@">
+ <summary>
+ <para type="description">Mark generated code with a visit count of -2 (Automatic) for the Visualizer if unvisited</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.VisibleBranches@">
+ <summary>
+ <para type="description">Hide complex internal IL branching implementation details in switch/match constructs, and just show what the source level logic implies.</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.LocalSource@">
+ <summary>
+ <para type="description">Don't instrument code for which the source file is not present.</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.Defer@">
+ <summary>
+ <para type="description">Defers writing runner-mode coverage data until process exit.</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.SourceLink@">
+ <summary>
+ <para type="description">Display sourcelink URLs rather than file paths if present.</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.DropReturnCode@">
+ <summary>
+ <para type="description">Do not report any non-zero return code from a launched process.</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.Version@">
+ <summary>
+ <para type="description">Selects `Version` mode</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.BranchCover@">
+ <summary>
+ <para type="description">Do not record line coverage.  Implies, and is compatible with, the -ReportFormat "opencover" option. Incompatible with `-LineCover`.</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.LineCover@">
+ <summary>
+ <para type="description">Do not record branch coverage.  Implies, and is compatible with, the -ReportFormat "opencover" option. Incompatible with `-BranchCover`.</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.Single@">
+ <summary>
+ <para type="description">only record the first hit at any location (or first for that context if `-CallContext` is operating).</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.MethodPoint@">
+ <summary>
+ <para type="description">Record only whether a method has been visited or not.  Overrides the `-LineCover` and `-BranchCover` options.</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.ZipFile@">
+ <summary>
+ <para type="description">Emit the XML report inside a zip archive.</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.Save@">
+ <summary>
+ <para type="description">Write raw coverage data to file for later processing</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.InPlace@">
+ <summary>
+ <para type="description">Instrument the inputDirectory, rather than the outputDirectory (e.g. for `dotnet test`)</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.ReportFormat@">
+ <summary>
+ <para type="description">Generate the report in the specified format (NCover or the default OpenCover)</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.CallContext@">
+ <summary>
+ <para type="description">Tracking either times of visits in ticks or designated method calls leading to the visits.</para>
+ <para type="description">A single digit 0-7 gives the number of decimal places of seconds to report; everything else is at the mercy of the system clock information available through DateTime.UtcNow</para>
+ <para type="description">A string in brackets "[]" is interpreted as an attribute type name (the trailing "Attribute" is optional), so [Test] or [TestAttribute] will match; if the name contains one or more ".", then it will be matched against the full name of the attribute type.</para>
+ <para type="description">Other strings are interpreted as method names (fully qualified if the string contains any "." characters).</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.MethodTopLevel@">
+ <summary>
+ <para type="description">Names to mark a function as "top level"</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.TypeTopLevel@">
+ <summary>
+ <para type="description">Names to mark a type as "top level"</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.AttributeTopLevel@">
+ <summary>
+ <para type="description">Attributes to mark a type as "top level"</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.AttributeFilter@">
+ <summary>
+ <para type="description">Attribute names to exclude from instrumentation</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.MethodFilter@">
+ <summary>
+ <para type="description">Method names to exclude from instrumentation</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.TypeFilter@">
+ <summary>
+ <para type="description">Type names to exclude from instrumentation</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.AssemblyExcludeFilter@">
+ <summary>
+ <para type="description">Assembly names to exclude from instrumentation (linked to instrumented assemblies)</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.AssemblyFilter@">
+ <summary>
+ <para type="description">Assembly names to exclude from instrumentation (linked by instrumented assemblies)</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.PathFilter@">
+ <summary>
+ <para type="description">Source file paths to exclude from instrumentation</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.FileFilter@">
+ <summary>
+ <para type="description">Source file names to exclude from instrumentation</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.Report@">
+ <summary>
+ <para type="description">The output report template file (default: 'coverage.xml' or 'coverage.json' in the current directory)</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.StrongNameKey@">
+ <summary>
+ <para type="description">The default strong naming key to apply to instrumented assemblies</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.Key@">
+ <summary>
+ <para type="description">Strong name key or keys that were used to sign the inputs</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.Dependency@">
+ <summary>
+ <para type="description">Assembly paths to resolve missing references.</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.SymbolDirectory@">
+ <summary>
+ <para type="description">Additional folder or folders to search for matching symbols for the assemblies in the input directory</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.OutputDirectory@">
+ <summary>
+ <para type="description">Folder or folders to receive the instrumented assemblies and their companions (default: sub-folder `__Instrumented` of the current directory; or `__Saved` if `-Inplace` is set).</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.InputDirectory@">
+ <summary>
+ <para type="description">Folder or folders containing assemblies to instrument (default: current directory)</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.CommandLine@">
+ <summary>
+ <para type="description">Arguments for a launched process</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.OutputFile@">
+ <summary>
+ <para type="description">Write the recorded coverage to this file rather than overwriting the original report file.</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.Cobertura@">
+ <summary>
+ <para type="description">File path for Cobertura format version of the collected data</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.Threshold@">
+ <summary>
+ <para type="description">One or more of minimum acceptable statement (S), branch (B) or method (M)/alternative method (AM) coverage percentage (integer, 1 to 100) or maximum acceptable CRAP/alternative CRAP score (C/AC followed by integer, 1 to 255) e.g. M80AM70C40AC100B50. If the value starts with a number, a leading S is assumed. If any threshold is specified more than once, the last instance is assumed -- so 25S50 counts as S50. Zero/absent values are ignored. If a coverage result is below threshold, or the CRAP score is above threshold, the return code of the process is the largest abs(threshold - actual) rounded up to the nearest integer.</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.LcovReport@">
+ <summary>
+ <para type="description">File path for lcov format version of the collected data</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.Executable@">
+ <summary>
+ <para type="description">The executable to run e.g. `dotnet`</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.WorkingDirectory@">
+ <summary>
+ <para type="description">The working directory for the application launch</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.RecorderDirectory@">
+ <summary>
+ <para type="description">The folder containing the instrumented code to monitor (including the `AltCover.Recorder.g.dll` generated by previous a use of the .net core `AltCover`).</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.InvokeAltCoverCommand.Runner@">
+ <summary>
+ <para type="description">Selects `Runner` mode</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.ZipFile(System.Management.Automation.SwitchParameter)">
+ <summary>
+ <para type="description">Emit the XML report inside a zip archive.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.WorkingDirectory(System.String)">
+ <summary>
+ <para type="description">The working directory for the application launch</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.VisibleBranches(System.Management.Automation.SwitchParameter)">
+ <summary>
+ <para type="description">Hide complex internal IL branching implementation details in switch/match constructs, and just show what the source level logic implies.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Version(System.Management.Automation.SwitchParameter)">
+ <summary>
+ <para type="description">Selects `Version` mode</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Verbosity(System.Diagnostics.TraceLevel)">
+ <summary>
+ <para type="description">Selects output level of the command</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.TypeTopLevel(System.String[])">
+ <summary>
+ <para type="description">Names to mark a type as "top level"</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.TypeFilter(System.String[])">
+ <summary>
+ <para type="description">Type names to exclude from instrumentation</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Threshold(System.String)">
+ <summary>
+ <para type="description">One or more of minimum acceptable statement (S), branch (B) or method (M)/alternative method (AM) coverage percentage (integer, 1 to 100) or maximum acceptable CRAP/alternative CRAP score (C/AC followed by integer, 1 to 255) e.g. M80AM70C40AC100B50. If the value starts with a number, a leading S is assumed. If any threshold is specified more than once, the last instance is assumed -- so 25S50 counts as S50. Zero/absent values are ignored. If a coverage result is below threshold, or the CRAP score is above threshold, the return code of the process is the largest abs(threshold - actual) rounded up to the nearest integer.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.SymbolDirectory(System.String[])">
+ <summary>
+ <para type="description">Additional folder or folders to search for matching symbols for the assemblies in the input directory</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.SummaryFormat(AltCover.Commands.Summary[])">
+ <summary>
+ <para type="description">Selects summary format</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.StrongNameKey(System.String)">
+ <summary>
+ <para type="description">The default strong naming key to apply to instrumented assemblies</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.SourceLink(System.Management.Automation.SwitchParameter)">
+ <summary>
+ <para type="description">Display sourcelink URLs rather than file paths if present.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Single(System.Management.Automation.SwitchParameter)">
+ <summary>
+ <para type="description">only record the first hit at any location (or first for that context if `-CallContext` is operating).</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.ShowStatic(AltCover.Commands.ShowHidden)">
+ <summary>
+ <para type="description">Instrument and show code that is by default skipped as trivial.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.ShowGenerated(System.Management.Automation.SwitchParameter)">
+ <summary>
+ <para type="description">Mark generated code with a visit count of -2 (Automatic) for the Visualizer if unvisited</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Save(System.Management.Automation.SwitchParameter)">
+ <summary>
+ <para type="description">Write raw coverage data to file for later processing</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Runner(System.Management.Automation.SwitchParameter)">
+ <summary>
+ <para type="description">Selects `Runner` mode</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.ReportFormat(AltCover.Commands.ReportFormat)">
+ <summary>
+ <para type="description">Generate the report in the specified format (NCover or the default OpenCover)</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Report(System.String)">
+ <summary>
+ <para type="description">The output report template file (default: 'coverage.xml' or 'coverage.json' in the current directory)</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.RecorderDirectory(System.String)">
+ <summary>
+ <para type="description">The folder containing the instrumented code to monitor (including the `AltCover.Recorder.g.dll` generated by previous a use of the .net core `AltCover`).</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.PathFilter(System.String[])">
+ <summary>
+ <para type="description">Source file paths to exclude from instrumentation</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.OutputFile(System.String)">
+ <summary>
+ <para type="description">Write the recorded coverage to this file rather than overwriting the original report file.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.OutputDirectory(System.String[])">
+ <summary>
+ <para type="description">Folder or folders to receive the instrumented assemblies and their companions (default: sub-folder `__Instrumented` of the current directory; or `__Saved` if `-Inplace` is set).</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.MethodTopLevel(System.String[])">
+ <summary>
+ <para type="description">Names to mark a function as "top level"</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.MethodPoint(System.Management.Automation.SwitchParameter)">
+ <summary>
+ <para type="description">Record only whether a method has been visited or not.  Overrides the `-LineCover` and `-BranchCover` options.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.MethodFilter(System.String[])">
+ <summary>
+ <para type="description">Method names to exclude from instrumentation</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.LocalSource(System.Management.Automation.SwitchParameter)">
+ <summary>
+ <para type="description">Don't instrument code for which the source file is not present.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.LineCover(System.Management.Automation.SwitchParameter)">
+ <summary>
+ <para type="description">Do not record branch coverage.  Implies, and is compatible with, the -ReportFormat "opencover" option. Incompatible with `-BranchCover`.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.LcovReport(System.String)">
+ <summary>
+ <para type="description">File path for lcov format version of the collected data</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Key(System.String[])">
+ <summary>
+ <para type="description">Strong name key or keys that were used to sign the inputs</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.InputDirectory(System.String[])">
+ <summary>
+ <para type="description">Folder or folders containing assemblies to instrument (default: current directory)</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.InPlace(System.Management.Automation.SwitchParameter)">
+ <summary>
+ <para type="description">Instrument the inputDirectory, rather than the outputDirectory (e.g. for `dotnet test`)</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.FileFilter(System.String[])">
+ <summary>
+ <para type="description">Source file names to exclude from instrumentation</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Executable(System.String)">
+ <summary>
+ <para type="description">The executable to run e.g. `dotnet`</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.DropReturnCode(System.Management.Automation.SwitchParameter)">
+ <summary>
+ <para type="description">Do not report any non-zero return code from a launched process.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Dependency(System.String[])">
+ <summary>
+ <para type="description">Assembly paths to resolve missing references.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Defer(System.Management.Automation.SwitchParameter)">
+ <summary>
+ <para type="description">Defers writing runner-mode coverage data until process exit.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.CommandLine(System.String[])">
+ <summary>
+ <para type="description">Arguments for a launched process</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Cobertura(System.String)">
+ <summary>
+ <para type="description">File path for Cobertura format version of the collected data</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.CallContext(System.String[])">
+ <summary>
+ <para type="description">Tracking either times of visits in ticks or designated method calls leading to the visits.</para>
+ <para type="description">A single digit 0-7 gives the number of decimal places of seconds to report; everything else is at the mercy of the system clock information available through DateTime.UtcNow</para>
+ <para type="description">A string in brackets "[]" is interpreted as an attribute type name (the trailing "Attribute" is optional), so [Test] or [TestAttribute] will match; if the name contains one or more ".", then it will be matched against the full name of the attribute type.</para>
+ <para type="description">Other strings are interpreted as method names (fully qualified if the string contains any "." characters).</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.BranchCover(System.Management.Automation.SwitchParameter)">
+ <summary>
+ <para type="description">Do not record line coverage.  Implies, and is compatible with, the -ReportFormat "opencover" option. Incompatible with `-LineCover`.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.AttributeTopLevel(System.String[])">
+ <summary>
+ <para type="description">Attributes to mark a type as "top level"</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.AttributeFilter(System.String[])">
+ <summary>
+ <para type="description">Attribute names to exclude from instrumentation</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.AssemblyFilter(System.String[])">
+ <summary>
+ <para type="description">Assembly names to exclude from instrumentation (linked by instrumented assemblies)</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.AssemblyExcludeFilter(System.String[])">
+ <summary>
+ <para type="description">Assembly names to exclude from instrumentation (linked to instrumented assemblies)</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.ZipFile">
+ <summary>
+ <para type="description">Emit the XML report inside a zip archive.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.WorkingDirectory">
+ <summary>
+ <para type="description">The working directory for the application launch</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.VisibleBranches">
+ <summary>
+ <para type="description">Hide complex internal IL branching implementation details in switch/match constructs, and just show what the source level logic implies.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Version">
+ <summary>
+ <para type="description">Selects `Version` mode</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Verbosity">
+ <summary>
+ <para type="description">Selects output level of the command</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.TypeTopLevel">
+ <summary>
+ <para type="description">Names to mark a type as "top level"</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.TypeFilter">
+ <summary>
+ <para type="description">Type names to exclude from instrumentation</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Threshold">
+ <summary>
+ <para type="description">One or more of minimum acceptable statement (S), branch (B) or method (M)/alternative method (AM) coverage percentage (integer, 1 to 100) or maximum acceptable CRAP/alternative CRAP score (C/AC followed by integer, 1 to 255) e.g. M80AM70C40AC100B50. If the value starts with a number, a leading S is assumed. If any threshold is specified more than once, the last instance is assumed -- so 25S50 counts as S50. Zero/absent values are ignored. If a coverage result is below threshold, or the CRAP score is above threshold, the return code of the process is the largest abs(threshold - actual) rounded up to the nearest integer.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.SymbolDirectory">
+ <summary>
+ <para type="description">Additional folder or folders to search for matching symbols for the assemblies in the input directory</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.SummaryFormat">
+ <summary>
+ <para type="description">Selects summary format</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.StrongNameKey">
+ <summary>
+ <para type="description">The default strong naming key to apply to instrumented assemblies</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.SourceLink">
+ <summary>
+ <para type="description">Display sourcelink URLs rather than file paths if present.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Single">
+ <summary>
+ <para type="description">only record the first hit at any location (or first for that context if `-CallContext` is operating).</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.ShowStatic">
+ <summary>
+ <para type="description">Instrument and show code that is by default skipped as trivial.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.ShowGenerated">
+ <summary>
+ <para type="description">Mark generated code with a visit count of -2 (Automatic) for the Visualizer if unvisited</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Save">
+ <summary>
+ <para type="description">Write raw coverage data to file for later processing</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Runner">
+ <summary>
+ <para type="description">Selects `Runner` mode</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.ReportFormat">
+ <summary>
+ <para type="description">Generate the report in the specified format (NCover or the default OpenCover)</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Report">
+ <summary>
+ <para type="description">The output report template file (default: 'coverage.xml' or 'coverage.json' in the current directory)</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.RecorderDirectory">
+ <summary>
+ <para type="description">The folder containing the instrumented code to monitor (including the `AltCover.Recorder.g.dll` generated by previous a use of the .net core `AltCover`).</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.PathFilter">
+ <summary>
+ <para type="description">Source file paths to exclude from instrumentation</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.OutputFile">
+ <summary>
+ <para type="description">Write the recorded coverage to this file rather than overwriting the original report file.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.OutputDirectory">
+ <summary>
+ <para type="description">Folder or folders to receive the instrumented assemblies and their companions (default: sub-folder `__Instrumented` of the current directory; or `__Saved` if `-Inplace` is set).</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.MethodTopLevel">
+ <summary>
+ <para type="description">Names to mark a function as "top level"</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.MethodPoint">
+ <summary>
+ <para type="description">Record only whether a method has been visited or not.  Overrides the `-LineCover` and `-BranchCover` options.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.MethodFilter">
+ <summary>
+ <para type="description">Method names to exclude from instrumentation</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.LocalSource">
+ <summary>
+ <para type="description">Don't instrument code for which the source file is not present.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.LineCover">
+ <summary>
+ <para type="description">Do not record branch coverage.  Implies, and is compatible with, the -ReportFormat "opencover" option. Incompatible with `-BranchCover`.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.LcovReport">
+ <summary>
+ <para type="description">File path for lcov format version of the collected data</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Key">
+ <summary>
+ <para type="description">Strong name key or keys that were used to sign the inputs</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.InputDirectory">
+ <summary>
+ <para type="description">Folder or folders containing assemblies to instrument (default: current directory)</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.InPlace">
+ <summary>
+ <para type="description">Instrument the inputDirectory, rather than the outputDirectory (e.g. for `dotnet test`)</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.FileFilter">
+ <summary>
+ <para type="description">Source file names to exclude from instrumentation</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Executable">
+ <summary>
+ <para type="description">The executable to run e.g. `dotnet`</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.DropReturnCode">
+ <summary>
+ <para type="description">Do not report any non-zero return code from a launched process.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Dependency">
+ <summary>
+ <para type="description">Assembly paths to resolve missing references.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Defer">
+ <summary>
+ <para type="description">Defers writing runner-mode coverage data until process exit.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.CommandLine">
+ <summary>
+ <para type="description">Arguments for a launched process</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.Cobertura">
+ <summary>
+ <para type="description">File path for Cobertura format version of the collected data</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.CallContext">
+ <summary>
+ <para type="description">Tracking either times of visits in ticks or designated method calls leading to the visits.</para>
+ <para type="description">A single digit 0-7 gives the number of decimal places of seconds to report; everything else is at the mercy of the system clock information available through DateTime.UtcNow</para>
+ <para type="description">A string in brackets "[]" is interpreted as an attribute type name (the trailing "Attribute" is optional), so [Test] or [TestAttribute] will match; if the name contains one or more ".", then it will be matched against the full name of the attribute type.</para>
+ <para type="description">Other strings are interpreted as method names (fully qualified if the string contains any "." characters).</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.BranchCover">
+ <summary>
+ <para type="description">Do not record line coverage.  Implies, and is compatible with, the -ReportFormat "opencover" option. Incompatible with `-LineCover`.</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.AttributeTopLevel">
+ <summary>
+ <para type="description">Attributes to mark a type as "top level"</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.AttributeFilter">
+ <summary>
+ <para type="description">Attribute names to exclude from instrumentation</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.AssemblyFilter">
+ <summary>
+ <para type="description">Assembly names to exclude from instrumentation (linked by instrumented assemblies)</para>
+ </summary>
+</member>
+<member name="P:AltCover.Commands.InvokeAltCoverCommand.AssemblyExcludeFilter">
+ <summary>
+ <para type="description">Assembly names to exclude from instrumentation (linked to instrumented assemblies)</para>
+ </summary>
+</member>
+<member name="M:AltCover.Commands.InvokeAltCoverCommand.ProcessRecord">
+ <summary>
+ <para type="description">Perform the `AltCover` operation</para>
+ </summary>
+</member>
+<member name="T:AltCover.Commands.InvokeAltCoverCommand">
+ <summary>
+ <para type="synopsis">The equivalent of the `AltCover` command or `altcover` global tool.</para>
+ <para type="description">The arguments parallel the command-line executable; the main difference is that `-Runner` is a switch parameter that selects the runner-mode parameter set if present.</para>
+ <para type="description">The "working directory" used where mentioned in the parameter descriptions is the current set location in PowerShell, **_not_** the underlying current directory.</para>
+ <para type="description">**Note**: As Powershell informational output is suppressed by default in PowerShell 5+, the `-InformationAction Continue` option is needed to show the progress and summary information for the process if this is desired.</para>
+ <para type="description">Summary information is also written to the object pipeline.</para>
+ <para type="description">**Note**: `-WhatIf` includes validation for the command line arguments.  It is ignored for the purely read-only `-Version` option </para>
+ <example>
+   <code>        Invoke-AltCover -Report $x -OutputDirectory  $o -InputDirectory $i -AssemblyFilter "Adapter" -ReportFormat NCover -InformationAction Continue</code>
+ </example>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ReportFormat.OpenCover">
+ <summary>
+ <para type="description">Generate an OpenCover format report</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ReportFormat.NCover">
+ <summary>
+ <para type="description">Generate an NCover format report</para>
+ </summary>
+</member>
+<member name="T:AltCover.Commands.ReportFormat">
+ <summary>
+ <para type="description">Values for the Invoke-AltCover -ReportFormat option</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ShowHidden.Reveal">
+ <summary>
+ <para type="description">treat the code as normal</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ShowHidden.Mark">
+ <summary>
+ <para type="description">show code ignored in static analysis with a special negative visit count if not visited</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.ShowHidden.KeepHidden">
+ <summary>
+ <para type="description">default, don't show code ignored in static analysis</para>
+ </summary>
+</member>
+<member name="T:AltCover.Commands.ShowHidden">
+ <summary>
+ <para type="description">Values for the Invoke-AltCover -ShowStatic option</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.Summary.BPlus">
+ <summary>
+ <para type="description">OpenCover plus CRAP score plus TeamCity with B for Block representing branch coverage, equivalent to (R, O, C)</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.Summary.RPlus">
+ <summary>
+ <para type="description">OpenCover plus CRAP score plus TeamCity with R for bRanch, equivalent to (B, O, C)</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.Summary.B">
+ <summary>
+ <para type="description">TeamCity with B for Block representing branch coverage</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.Summary.R">
+ <summary>
+ <para type="description">TeamCity with R for bRanch</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.Summary.C">
+ <summary>
+ <para type="description">Change Risk Anti-Patterns score only</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.Summary.O">
+ <summary>
+ <para type="description">OpenCover classic summary only</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.Summary.N">
+ <summary>
+ <para type="description">No summary, overriding any other value given</para>
+ </summary>
+</member>
+<member name="F:AltCover.Commands.Summary.Default">
+ <summary>
+ <para type="description">OpenCover format with CRAP score, equivalent to (O, C) if no other values given </para>
+ </summary>
+</member>
+<member name="T:AltCover.Commands.Summary">
+ <summary>
+ <para type="description">Values for the Invoke-AltCover -Summary option</para>
+ </summary>
+</member>
+</members>
+</doc>

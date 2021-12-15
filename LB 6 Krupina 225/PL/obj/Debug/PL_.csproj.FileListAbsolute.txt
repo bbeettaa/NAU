@@ -1,0 +1,10 @@
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\PL_\bin\Debug\PL_.exe.config
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\PL_\bin\Debug\PL_.exe
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\PL_\bin\Debug\PL_.pdb
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\PL_\obj\Debug\PL_.csproj.AssemblyReference.cache
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\PL_\obj\Debug\PL_.Form1.resources
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\PL_\obj\Debug\PL_.Properties.Resources.resources
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\PL_\obj\Debug\PL_.csproj.GenerateResource.cache
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\PL_\obj\Debug\PL_.csproj.CoreCompileInputs.cache
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\PL_\obj\Debug\PL_.exe
+C:\Users\bedu_s_bashkoy\source\repos\LB 5 Krupina 225 t\PL_\obj\Debug\PL_.pdb
