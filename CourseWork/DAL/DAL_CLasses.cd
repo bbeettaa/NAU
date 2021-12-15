@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DAL_Classes.AbstractClass" Collapsed="true">
+    <Position X="4.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAACgAAAAAAAACAAAAAAAIAQAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Classes\AbstractClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL_Classes.Packet" Collapsed="true">
+    <Position X="13.5" Y="4.25" Width="3" />
+    <AssociationLine Name="students" Type="ProgramClasses.Student" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.5" Y="4.605" />
+        <Point X="12.115" Y="4.605" Type="JumpStart" />
+        <Point X="11.948" Y="4.605" Type="JumpEnd" />
+        <Point X="8.184" Y="4.605" />
+        <Point X="8.184" Y="11.658" />
+        <Point X="3.562" Y="11.658" />
+        <Point X="3.562" Y="10.691" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="taxiDrivers" Type="ProgramClasses.TaxiDriver" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.5" Y="4.605" />
+        <Point X="12.115" Y="4.605" Type="JumpStart" />
+        <Point X="11.948" Y="4.605" Type="JumpEnd" />
+        <Point X="8.194" Y="4.605" />
+        <Point X="8.194" Y="11.713" />
+        <Point X="5.625" Y="11.713" />
+        <Point X="5.625" Y="10.691" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="acrobats" Type="ProgramClasses.Acrobat" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.5" Y="4.601" />
+        <Point X="12.115" Y="4.601" Type="JumpStart" />
+        <Point X="11.948" Y="4.601" Type="JumpEnd" />
+        <Point X="8.162" Y="4.601" />
+        <Point X="8.162" Y="11.692" />
+        <Point X="1.25" Y="11.692" />
+        <Point X="1.25" Y="10.691" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAABAAAEAAAAAAAAAAAAAAAAAAAAACCAAI=</HashCode>
+      <FileName>Classes\Packet.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="students" />
+      <Field Name="taxiDrivers" />
+      <Field Name="acrobats" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DAL_Classes.Settings" Collapsed="true">
+    <Position X="9.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gFAAQgAAEAADgAAAAQCQAACAAAoAIgQQAEAIAAEAAAA=</HashCode>
+      <FileName>Classes\Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramClasses.AbstractPerson" Collapsed="true">
+    <Position X="2.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAkAAAAIAABAAAAgAAAAAAAIAQAAAAAAIAogAAAg=</HashCode>
+      <FileName>Classes\AbstractPerson.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramClasses.Acrobat" Collapsed="true">
+    <Position X="0.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAEAAAAAAAIAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Classes\Acrobat.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProgramClasses.Person" Collapsed="true">
+    <Position X="2.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Classes\Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramClasses.Student" Collapsed="true">
+    <Position X="2.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAACAAAAIAAAAAAAAAAIAAAAAAIACCSAAA=</HashCode>
+      <FileName>Classes\Student.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ProgramClasses.TaxiDriver" Collapsed="true">
+    <Position X="5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAICAA=</HashCode>
+      <FileName>Classes\TaxiDriver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DALWorckWithDataBases.EntityContext" Collapsed="true">
+    <Position X="11.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAiAAAAYAgkAQAgACQQADAwgAEAABACAQAAAA=</HashCode>
+      <FileName>EntityContext.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="settings" />
+      <Field Name="JsonConfig" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DALWorckWithDataBases.BinaryProvider" Collapsed="true">
+    <Position X="13.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACBAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data Provider\BinaryProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DALWorckWithDataBases.CustomProvider" Collapsed="true">
+    <Position X="11.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAACCBAAAAAEABAAAAAAQA=</HashCode>
+      <FileName>Data Provider\CustomProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DALWorckWithDataBases.AbstarctDataProvider" Collapsed="true">
+    <Position X="14.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAQAAAAAAAAAIAQAAAAAACBAAAAAAEAAIAAAAAA=</HashCode>
+      <FileName>Data Provider\AbstarctDataProvider.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="packet" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DALWorckWithDataBases.JsonProvider" Collapsed="true">
+    <Position X="17.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAIAgAAAAAAAAACBAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data Provider\JsonProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DALWorckWithDataBases.XML_Provider" Collapsed="true">
+    <Position X="15.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACBAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data Provider\XML Provider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ProgramInterfaces.IDancable" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Classes\IDancable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

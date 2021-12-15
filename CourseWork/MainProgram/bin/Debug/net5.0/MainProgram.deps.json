@@ -1,0 +1,75 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "MainProgram/1.0.0": {
+        "dependencies": {
+          "PL": "1.0.0"
+        },
+        "runtime": {
+          "MainProgram.dll": {}
+        }
+      },
+      "BLL/1.0.0": {
+        "dependencies": {
+          "DALWorckWithDataBases": "1.0.0"
+        },
+        "runtime": {
+          "BLL.dll": {}
+        }
+      },
+      "DALWorckWithDataBases/1.0.0": {
+        "dependencies": {
+          "DAL_Classes": "1.0.0"
+        },
+        "runtime": {
+          "DALWorckWithDataBases.dll": {}
+        }
+      },
+      "DAL_Classes/1.0.0": {
+        "runtime": {
+          "DAL_Classes.dll": {}
+        }
+      },
+      "PL/1.0.0": {
+        "dependencies": {
+          "BLL": "1.0.0"
+        },
+        "runtime": {
+          "PL.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MainProgram/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BLL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DALWorckWithDataBases/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DAL_Classes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

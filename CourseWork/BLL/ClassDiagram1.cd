@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BLL.Category" Collapsed="true">
+    <Position X="1.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAIaIIAAAAAACAAAQAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Category.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.DataSetObjects" Collapsed="true">
+    <Position X="7.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQCAAACCAkABAAAAYAAAAhQQAEAAAAAUSAAAIQABAU=</HashCode>
+      <FileName>Classes\DataSetObjects.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.EntityService" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <AssociationLine Name="dataSetProduct" Type="BLL.DataSetObjects">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.058" Y="-0.294" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="dataSetSupplier" Type="BLL.DataSetObjects">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.131" Y="0.091" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>hEQCFKACKECKDAEIkAAGAQhQ0IBAEKAAQQAIAoAABAA=</HashCode>
+      <FileName>Classes\EntityService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="context" />
+      <Field Name="dataSetProduct" />
+      <Field Name="dataSetSupplier" />
+      <Field Name="sorting" />
+      <Property Name="category" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BLL.Sorting" Collapsed="true">
+    <Position X="1.75" Y="2" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="BLL.Sorting.SortingOreder" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Classes\Sorting.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Delegate Name="BLL.Sorting.getSortValue" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Classes\Sorting.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>YBAAACAAAAAAAAABAgAAAAAgAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Classes\Sorting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DALWorckWithDataBases.EntityContext" Collapsed="true">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,30 @@
+{
+  "students": [
+    {
+      "StudentID": "-1",
+      "Course": "0",
+      "FavoriteDance": "Unknown",
+      "Hostel": "000.00",
+      "FirstName": "Undefined",
+      "LastName": "Undefined",
+      "Brand": "Undefined",
+      "PassportSer": "00000000",
+      "PassportNo": "00000000",
+      "GroupCollection": "1"
+    },
+    {
+      "StudentID": "-1",
+      "Course": "0",
+      "FavoriteDance": "Unknown",
+      "Hostel": "000.00",
+      "FirstName": "Undefined",
+      "LastName": "Undefined",
+      "Brand": "Undefined",
+      "PassportSer": "00000000",
+      "PassportNo": "00000000",
+      "GroupCollection": "2"
+    }
+  ],
+  "taxiDrivers": [],
+  "acrobats": []
+}

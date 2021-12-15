@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DAL_Classes.AbstractClass" Collapsed="true">
+    <Position X="6.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACCgAAAAAAAAAAAAAAAAIAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Classes\AbstractClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL_Classes.Packet" Collapsed="true">
+    <Position X="1.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAABAAAAACAAAAAAAAAACAAAAAABACAAAA=</HashCode>
+      <FileName>Classes\Packet.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="products" />
+      <Field Name="suppliers" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DAL_Classes.Settings" Collapsed="true">
+    <Position X="9" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gBAAQAAAEAADAAAAAACQAACAAAgAIgQQAEAIAAAAAAI=</HashCode>
+      <FileName>Classes\Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramClasses.AbstractWorkableClass" Collapsed="true">
+    <Position X="6.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAACAAAAABAAAAAAAAQAAAIAAAAAAAAIAAACAAA=</HashCode>
+      <FileName>Classes\AbstractWorkableClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramClasses.Product" Collapsed="true">
+    <Position X="6.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAACQQAAAAAAAAAAAAgABAIAAAACAAAIAAABAAA=</HashCode>
+      <FileName>Classes\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgramClasses.Supplier" Collapsed="true">
+    <Position X="8.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEAAAACAAAAAAAAAAAAAAAAAAIAAAAAAAAIAAAAAAg=</HashCode>
+      <FileName>Classes\Supplier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DALWorckWithDataBases.AbstarctDataProvider" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgQAQAAAAAAAAAIAQAAAAAACBAAAAAAEAAIAAAAAA=</HashCode>
+      <FileName>Data Provider\AbstarctDataProvider.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="packet" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DALWorckWithDataBases.BinaryProvider" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACBAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data Provider\BinaryProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DALWorckWithDataBases.CustomProvider" Collapsed="true">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAACCBAAAAAEABAAAAAAQA=</HashCode>
+      <FileName>Data Provider\CustomProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DALWorckWithDataBases.JsonProvider" Collapsed="true">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgIAAAAAAAAAIAgAAAAAAAAACBAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data Provider\JsonProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DALWorckWithDataBases.XML_Provider" Collapsed="true">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACBAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data Provider\XML Provider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DALWorckWithDataBases.EntityContext" Collapsed="true">
+    <Position X="12" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gA0AAAACiAAARIAggUAIgSCIQADAwgAiAAAAKIAAAAA=</HashCode>
+      <FileName>EntityContext.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="JsonConfig" />
+      <Field Name="settings" />
+      <Field Name="packet" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="dataProvider" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

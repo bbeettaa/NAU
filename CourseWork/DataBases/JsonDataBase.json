@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "Brand": "X",
+      "Price": "10.00",
+      "InStock": "0",
+      "Name": "C",
+      "GroupCollection": "Default"
+    },
+    {
+      "Brand": "W",
+      "Price": "5.00",
+      "InStock": "0",
+      "Name": "D",
+      "GroupCollection": "Default"
+    },
+    {
+      "Brand": "Y",
+      "Price": "0.50",
+      "InStock": "0",
+      "Name": "B",
+      "GroupCollection": "Default"
+    },
+    {
+      "Brand": "Z",
+      "Price": "50.00",
+      "InStock": "0",
+      "Name": "A",
+      "GroupCollection": "Default"
+    }
+  ],
+  "suppliers": [
+    {
+      "LastName": "Undefined",
+      "Name": "Undefined",
+      "GroupCollection": "Default"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "JsonFileName": "\\JsonDataBase.json",
+  "XmlFileName": "\\XmlDataBase.xml",
+  "BinaryFileName": "\\BinaryDataBase.dat",
+  "CustomFileName": "\\CustomDataBase.van",
+  "NumCurrentFileName": 0
+}
