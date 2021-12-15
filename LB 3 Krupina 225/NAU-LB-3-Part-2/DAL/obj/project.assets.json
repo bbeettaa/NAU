@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bedu_s_bashkoy\\source\\repos\\LB 3 Krupina 225\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\bedu_s_bashkoy\\source\\repos\\LB 3 Krupina 225\\NAU-LB-3-Part-2\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\Users\\bedu_s_bashkoy\\source\\repos\\LB 3 Krupina 225\\DAL\\DAL.csproj",
+      "projectPath": "C:\\Users\\bedu_s_bashkoy\\source\\repos\\LB 3 Krupina 225\\NAU-LB-3-Part-2\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\bedu_s_bashkoy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bedu_s_bashkoy\\source\\repos\\LB 3 Krupina 225\\DAL\\obj\\",
+      "outputPath": "C:\\Users\\bedu_s_bashkoy\\source\\repos\\LB 3 Krupina 225\\NAU-LB-3-Part-2\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -65,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
